@@ -1,0 +1,1 @@
+This project is to learn the basic concepts of c programming language
