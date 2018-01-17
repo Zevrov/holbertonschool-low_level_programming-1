@@ -1,6 +1,8 @@
 #include <stdio.h>
+/*
+ *main prints out the output in the file
+*/
 
-/*This prints the output*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
