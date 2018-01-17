@@ -1,7 +1,4 @@
 #include <stdio.h>
-/*
- *main prints out the output in the file
-*/
 
 int main(void)
 {
