@@ -11,14 +11,11 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		for (i2 = '0'; i2 <='9'; i2++)
+		for (i2 = '0'; i2 <= '9'; i2++)
 		{
 			putchar(i);
 			putchar(i2);
-			if (i == '9' && i2 == '9')
-			{
-			}
-			else
+			if (i != '9' && i2 != '9')
 			{
 				putchar(',');
 				putchar(' ');
