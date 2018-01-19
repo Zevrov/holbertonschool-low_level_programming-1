@@ -16,10 +16,10 @@ int main(void)
 		i2 = i + 1;
 		while (i2 <= 99)
 		{
-			putchar(i / 10 % 10 + '0');
+			putchar(i / 10 + '0');
 			putchar(i % 10 + '0');
 			putchar(' ');
-			putchar(i2 / 10 % 10 + '0');
+			putchar(i2 / 10 + '0');
 			putchar(i2 % 10 + '0');
 			if (i == 98 && i2 == 99)
 			{
