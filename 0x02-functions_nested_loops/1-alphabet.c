@@ -1,14 +1,15 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet - This will rpint all the alphabet.
  *
  * Return: Always 0.
  */
 void print_alphabet(void)
 {
 	int c;
-	for(c = 'a'; c <= 'z'; c++)
+
+	for (c = 'a'; c <= 'z'; c++)
 		_putchar(c);
 	_putchar('\n');
 }
