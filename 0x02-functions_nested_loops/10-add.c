@@ -1,7 +1,11 @@
 #include "holberton.h"
 
 /**
- * jack_bauer - print 24 hours
+ * add - print 24 hours
+ *
+ * @a: first input
+ *
+ * @b: second input
  *
  * Return: last digit
  */
