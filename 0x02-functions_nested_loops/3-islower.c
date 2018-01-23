@@ -3,7 +3,9 @@
 /**
  * _islower - convert lowercase to 0 and 1
  *
- * Return: Always 0 (Success)
+ * @c: Value of input
+ *
+ * Return: 1 or 0
  */
 int _islower(int c)
 {
