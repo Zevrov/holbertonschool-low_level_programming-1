@@ -2,7 +2,6 @@
 
 /**
  * times_table - print times table
- *
  */
 void times_table(void)
 {
@@ -16,9 +15,13 @@ void times_table(void)
 			ab1 = ab / 10;
 			ab2 = ab % 10;
 			if (ab1 == 0)
+			{
 				_putchar(' ');
+			}
 			else
+			{
 				_putchar(ab1 + '0');
+			}
 			_putchar(ab2 + '0');
 			if (b < 9)
 			{
