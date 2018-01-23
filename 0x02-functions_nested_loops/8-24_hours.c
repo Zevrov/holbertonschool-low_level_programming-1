@@ -1,18 +1,16 @@
 #include "holberton.h"
 
 /**
- * print_last_digit - prints last digit of a number
- *
- * @n: Value of input number
+ * jack_bauer - print 24 hours
  *
  * Return: last digit
  */
 void jack_bauer(void)
 {
 	int t, m;
-	
+
 	for (t = 0; t < 24; t++)
-		for (m = 0; m < 60; m ++)
+		for (m = 0; m < 60; m++)
 		{
 			_putchar(t / 10 + '0');
 			_putchar(t % 10 + '0');
