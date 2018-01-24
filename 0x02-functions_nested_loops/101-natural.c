@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-	int a, b, c;
+	int a, b;
 
-	c = 0;
-	for (a = 1; a * 3 < 1024; a++)
-		c = c + a * 3;
-	for (b = 1; b * 5 < 1024; b++)
-		c = c + b * 5;
-	printf("%d\n", c);
+	for (a = 0; a < 1024; a++)
+	{
+		if (a % 3 == 0 || a % 5 == 0)
+			b = b + a;
+	}
+	printf("%d\n", b);
 	return (0);
 }
