@@ -9,17 +9,17 @@ int main(void)
 {
 	long int a, b, c, n;
 
-	a = 1;
-	b = 2;
-	c = 0;
-	printf("%ld, ", a);
-	printf("%ld, ", b);
-	for (n = 4; n <= 50; n++)
+	a = 0;
+	b = 1;
+	for (n = 0; n < 50; n++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		printf("%ld, ", c);
+		printf("%ld", c);
+		if (n == 49)
+			putchar('\n');
+		else
+			printf(", ");
 	}
-	putchar('\n');
 }
