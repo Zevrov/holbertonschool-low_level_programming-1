@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+/**
+ * main - increasing and decreasing until 98
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	long int a, b, c, d, e, f, g, h, i, n;
+
+	a = 0;
+	b = 1;
+	for (n = 0; n <= 98; n++)
+	{
+		if (n < 91)
+		{
+			c = a + b;
+			a = b;
+			b = c;
+			printf("%ld", c);
+			printf(", ");
+		}
+		else if (n == 91)
+		{
+			d = a % 1000;
+			a = a / 1000;
+			e = b % 1000;
+			b = b / 1000;
+		}
+		else
+		{
+			i = (d + e) / 1000;
+			g = (d + e) - i * 1000;
+			h = (a + b) + i;
+			d = e;
+			e = g;
+			a = b;
+			b = h;
+			printf("%ld%ld", h, g);
+			if (n != 98)
+				printf(", ");
+		}
+	}
+	putchar('\n');
+	return (0);
+}
