@@ -4,7 +4,6 @@
  * main - increasing and decreasing until 98
  *
  * Return: Always 0.
- *
  */
 int main(void)
 {
@@ -15,12 +14,12 @@ int main(void)
 	c = 0;
 	printf("%ld, ", a);
 	printf("%ld, ", b);
-	for (n = 0; n <= 50; n++)
+	for (n = 3; n <= 50; n++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		printf("%ld, ", b);
+		printf("%ld, ", c);
 	}
 	putchar('\n');
 }
