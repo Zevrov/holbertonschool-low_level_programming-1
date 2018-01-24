@@ -10,6 +10,7 @@ int main(void)
 {
 	int a, b, c;
 
+	c = 0
 	for (a = 1; a * 3 < 1024; a++)
 		c = c + a * 3;
 	for (b = 1; b * 5 < 1024; b++)
