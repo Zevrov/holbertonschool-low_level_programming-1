@@ -7,11 +7,12 @@
  */
 int main(void)
 {
-	long int a, b, c;
+	long int a, b, c, n;
 
 	a = 0;
 	b = 1;
 	c = 1;
+	n = 0;
 	for (b = c; c < 4000000;)
 	{
 		c = a + b;
@@ -19,11 +20,10 @@ int main(void)
 		b = c;
 		if (c % 2 == 0)
 		{
-			printf("%ld", c);
-			if (c != 3524578)
-				printf(", ");
+			n = n + c;
 		}
 	}
+	printf("%ld", n);
 	putchar('\n');
 	return (0);
 }
