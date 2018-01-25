@@ -3,7 +3,7 @@
 /**
  * _isdigit - check for numbers
  *
- * @n: Value of input character
+ * @c: Value of input character
  *
  * Return: 1 if number 0 if not
  */
