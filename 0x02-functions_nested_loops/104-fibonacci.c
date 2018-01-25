@@ -7,7 +7,9 @@
  */
 int main(void)
 {
-	long int a, b, c, d, e, f, g, h, i, n;
+	long int a, b, c, f, g, h, i, n;
+	long int split_a1, split_a2;
+	long int split_b1, split_b2;
 
 	a = 0;
 	b = 1;
@@ -23,20 +25,20 @@ int main(void)
 		}
 		else if (n == 91)
 		{
-			d = a % 1000;
-			a = a / 1000;
-			e = b % 1000;
-			b = b / 1000;
+			split_a2 = a % 1000000000;
+			split_a1 = a / 1000000000;
+			split_b2 = b % 1000000000;
+			split_b1 = b / 1000000000;
 		}
 		else
 		{
-			i = (d + e) / 1000;
-			g = (d + e) - i * 1000;
-			h = (a + b) + i;
-			d = e;
-			e = g;
-			a = b;
-			b = h;
+			i = (split_a2 + split_b2) / 1000000000;
+			g = (split_a2 + split_b2) - i * 1000000000;
+			h = (split_a1 + split_b1) + i;
+			split_a2 = split_b2;
+			split_b2 = g;
+			split_a1 = split_b1;
+			split_b1 = h;
 			printf("%ld%ld", h, g);
 			if (n != 98)
 				printf(", ");
