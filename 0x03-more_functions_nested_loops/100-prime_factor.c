@@ -19,11 +19,9 @@ int main(void)
 		else
 		{
 			n = n / div;
-			printf("%ld", div);
-			if (div < n)
-				printf(", ");
-			else
-				putchar('\n');
+			if (div > n)
+				printf("%ld", div);
 		}
 	}
+	putchar('\n');
 }
