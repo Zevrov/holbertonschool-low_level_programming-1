@@ -7,9 +7,10 @@
  */
 int main(void)
 {
-	long int a, b, c, f, g, h, i, n;
+	long int a, b, c, n;
 	long int split_a1, split_a2;
 	long int split_b1, split_b2;
+	long int mix, tens, ones;
 
 	a = 0;
 	b = 1;
@@ -32,14 +33,14 @@ int main(void)
 		}
 		else
 		{
-			i = (split_a2 + split_b2) / 1000000000;
-			g = (split_a2 + split_b2) - i * 1000000000;
-			h = (split_a1 + split_b1) + i;
+			mix = (split_a2 + split_b2) / 1000000000;
+			ones = (split_a2 + split_b2) - mix * 1000000000;
+			tens = (split_a1 + split_b1) + mix;
 			split_a2 = split_b2;
-			split_b2 = g;
+			split_b2 = ones;
 			split_a1 = split_b1;
-			split_b1 = h;
-			printf("%ld%ld", h, g);
+			split_b1 = tens;
+			printf("%ld%ld", tens, ones);
 			if (n != 98)
 				printf(", ");
 		}
