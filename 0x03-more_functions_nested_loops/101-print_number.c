@@ -26,9 +26,7 @@ void print_number(int n)
 	{
 		_putchar(num + '0');
 	}
-	else if (num == 0)
-		_putchar(num + '0');
-	else
+	else if (c_digit > 1)
 	{
 		ten_pow = 1;
 		for (a = 1; a < c_digit; a++)
@@ -41,4 +39,6 @@ void print_number(int n)
 			c_digit--;
 		}
 	}
+	else
+		_putchar('0');
 }
