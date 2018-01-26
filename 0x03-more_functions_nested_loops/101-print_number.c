@@ -21,11 +21,7 @@ void print_number(int n)
 		n = n / 10;
 		c_digit++;
 	}
-	if (c_digit == 1)
-	{
-		_putchar(num + '0');
-	}
-	else if (c_digit > 1)
+	if (c_digit >= 1)
 	{
 		ten_pow = 1;
 		for (a = 1; a < c_digit; a++)
