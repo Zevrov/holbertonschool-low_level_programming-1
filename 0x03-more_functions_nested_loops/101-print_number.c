@@ -24,7 +24,9 @@ void print_number(int n)
 		c_digit++;
 	}
 	if (c_digit == 1)
+	{
 		_putchar(num_v + '0');
+	}
 	else if (n == 0)
 		_putchar(num_v + '0');
 	else
