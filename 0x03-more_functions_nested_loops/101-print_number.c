@@ -31,12 +31,11 @@ void print_number(int n)
 		ten_pow = 1;
 		for (a = 1; a < c_digit; a++)
 			ten_pow *= 10;
-		while (c_digit >= 1)
+		while (ten_pow >= 1)
 		{
 			print_n = (num / ten_pow) % 10;
 			_putchar(print_n + '0');
 			ten_pow = ten_pow / 10;
-			c_digit--;
 		}
 	}
 	else
