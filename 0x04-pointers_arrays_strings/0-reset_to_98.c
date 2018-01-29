@@ -1,11 +1,9 @@
 #include "holberton.h"
 
 /**
- * _isdigit - check for numbers
+ * reset_to_98 - change numbers to 98
  *
- * @c: Value of input character
- *
- * Return: 1 if number 0 if not
+ * @n: Value of input character
  */
 void reset_to_98(int *n)
 {
