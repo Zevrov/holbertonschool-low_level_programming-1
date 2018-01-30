@@ -29,6 +29,8 @@ int _atoi(char *s)
 	{
 		if (s[count] == '-')
 			tmp_n = tmp_n * -1;
+		if (s[count] == '+')
+			tmp_n = tmp_n * 1;
 		count--;
 	}
 	tmp = tmp * tmp_n;
