@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int counter = 0, count = 0;
-	int tmp = 0;
+	long int tmp = 0;
 
 	while (s[counter] != '\0')
 	{
