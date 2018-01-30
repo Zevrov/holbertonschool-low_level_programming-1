@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _puts - prints the string
+ * print_rev - prints the string in reverse
  *
  * @s: Value of input of string
  */
