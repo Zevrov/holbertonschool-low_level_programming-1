@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int counter = 0, count = 0;
-	long int tmp = 0;
+	int tmp = 0, tmp_n = 1;
 
 	while (s[counter] != '\0')
 	{
@@ -28,8 +28,9 @@ int _atoi(char *s)
 	while (count >= 0)
 	{
 		if (s[count] == '-')
-			tmp = tmp * -1;
+			tmp_n = tmp_n * -1;
 		count--;
 	}
+	tmp = tmp * tmp_n;
 	return (tmp);
 }
