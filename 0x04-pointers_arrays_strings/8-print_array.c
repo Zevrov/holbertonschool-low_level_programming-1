@@ -1,7 +1,8 @@
+#include "holberton.h"
 #include <stdio.h>
 
 /**
- * print_array - prints one char out of 2 of a string
+ * print_array - prints all the array side by side
  *
  * @a: Value of input array
  *
