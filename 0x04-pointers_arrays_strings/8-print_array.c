@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -15,7 +14,7 @@ void print_array(int *a, int n)
 	while (count < n)
 	{
 		printf("%d", a[count]);
-		if (count < n -1)
+		if (count < n - 1)
 			printf(", ");
 		else
 			printf("\n");
