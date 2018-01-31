@@ -28,8 +28,5 @@ int _atoi(char *s)
 			break;
 		count++;
 	}
-	if (tmp == '\0')
-		return (0);
-	else
-		return (tmp = tmp * tmp_n);
+	return (tmp = tmp * tmp_n);
 }
