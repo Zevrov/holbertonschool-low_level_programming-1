@@ -9,16 +9,11 @@
  */
 int _atoi(char *s)
 {
-	int counter = 0, count = 0;
+	int count = 0;
 	unsigned int tmp = 0;
 	int tmp_n = 1;
 
-	while (s[counter] != '\0')
-	{
-		counter++;
-	}
-	counter = counter - 1;
-	while (counter >= count)
+	while (s[count] != '\0')
 	{
 		if (s[count] == '-')
 			tmp_n = tmp_n * -1;
