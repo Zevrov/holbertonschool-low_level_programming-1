@@ -20,17 +20,13 @@ int _atoi(char *s)
 	counter = counter - 1;
 	while (counter >= count)
 	{
+		if (s[count] == '-')
+			tmp_n = tmp_n * -1;
 		if (s[count] >= '0' && s[count] <= '9')
 			tmp = tmp * 10 + (s[count] - '0');
 		if (s[count] == ';')
 			break;
 		count++;
-	}
-	while (count >= 0)
-	{
-		if (s[count] == '-')
-			tmp_n = tmp_n * -1;
-		count--;
 	}
 	if (tmp == '\0')
 		return (0);
