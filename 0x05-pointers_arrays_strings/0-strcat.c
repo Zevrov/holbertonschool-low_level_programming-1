@@ -6,6 +6,8 @@
  * @dest: output destination
  *
  * @src: input source
+ *
+ * Return: dest
  */
 char *_strcat(char *dest, char *src)
 {
