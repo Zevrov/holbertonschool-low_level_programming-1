@@ -1,13 +1,15 @@
 #include "holberton.h"
 
 /**
- * _strncat - append the string at the end depending on n value
+ * _strncat - append value at certain amount
  *
  * @dest: output destination
  *
  * @src: input source
  *
  * @n: the sting location where to append
+ *
+ * Return: dest string
  */
 char *_strncat(char *dest, char *src, int n)
 {
