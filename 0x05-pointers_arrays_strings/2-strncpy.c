@@ -8,6 +8,8 @@
  * @src: input source
  *
  * @n: the sting location where to replace
+ *
+ * Retrun: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
