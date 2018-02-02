@@ -13,6 +13,9 @@ char *cap_string(char *str)
 
 	while (str[count] != '\0')
 	{
+		if (count == 0)
+			if (str[count] >= 'a' && str[count] <= 'z')
+				str[count] = str[count] - 32;
 		if (str[count] == ' ' ||
 		    str[count] == '\t' ||
 		    str[count] == '\n' ||
@@ -29,9 +32,7 @@ char *cap_string(char *str)
 		{
 			count++;
 			if (str[count] >= 'a' && str[count] <= 'z')
-			{
 				str[count] = str[count] - 32;
-			}
 			count--;
 		}
 		count++;
