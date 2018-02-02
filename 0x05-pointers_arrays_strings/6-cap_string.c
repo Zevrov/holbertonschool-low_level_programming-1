@@ -9,11 +9,9 @@
  */
 char *cap_string(char *str)
 {
-	int count = 0, n = 0;
+	int count = 0;
 
-	while (str[n] != '\0')
-		n++;
-	while (count < n)
+	while (str[count] != '\0')
 	{
 		if (str[count] == ' ' ||
 		    str[count] == '\t' ||
@@ -28,8 +26,14 @@ char *cap_string(char *str)
 		    str[count] == ')' ||
 		    str[count] == '{' ||
 		    str[count] == '}')
-			if (str[count + 1] >= 'a' && str[count + 1] <= 'z')
-				str[count + 1] = str[count + 1] - 32;
+		{
+			count++;
+			if (str[count] >= 'a' && str[count] <= 'z')
+			{
+				str[count] = str[count] - 32;
+			}
+			count--;
+		}
 		count++;
 	}
 	return (str);
