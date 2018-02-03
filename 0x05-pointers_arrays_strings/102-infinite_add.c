@@ -4,6 +4,8 @@
  * counter - count size of input
  *
  * @n: count this size
+ *
+ * Return: the count
  */
 int counter(char *n)
 {
@@ -15,9 +17,13 @@ int counter(char *n)
 }
 
 /**
- * counter - count size of input
+ * counter_check - chek witch size is bigger
  *
- * @c: count this size
+ * @c1: count size 1
+ *
+ * @c2: count size 2
+ *
+ * Return: c
  */
 int counter_check(int c1, int c2)
 {
@@ -31,9 +37,11 @@ int counter_check(int c1, int c2)
 }
 
 /**
- * shifter - count size of input
+ * shifter - shift the numbers to 1 less digit
  *
- * @n: count this size
+ * @r: character r
+ *
+ * Return: return the sting
  */
 char *shifter(char *r)
 {
