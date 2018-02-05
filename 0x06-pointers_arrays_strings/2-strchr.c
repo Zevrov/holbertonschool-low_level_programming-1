@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#define NULL 0
 /**
  * _strchr - locate character in a string
  *
@@ -21,5 +21,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		}
 	}
-	return (&s[count]);
+	return (NULL);
 }
