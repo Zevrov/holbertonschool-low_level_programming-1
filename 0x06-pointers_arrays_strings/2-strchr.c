@@ -14,8 +14,6 @@ char *_strchr(char *s, char c)
 {
 	int count;
 
-	if (c == '\0')
-		return (NULL);
 	for (count = 0; s[count] != '\0'; count++)
 	{
 		if (s[count] == c)
@@ -24,5 +22,7 @@ char *_strchr(char *s, char c)
 			return (s);
 		}
 	}
-	return (&s[count]);
+	if (c == '\0')
+		return (&s[count]);
+	return (NULL);
 }
