@@ -20,7 +20,5 @@ char *_strpbrk(char *s, char *accept)
 			if (s[s_count] == accept[a_count])
 				return (&s[s_count]);
 	}
-	if (accept[a_count] == '\0')
-		return (&s[s_count]);
 	return (NULL);
 }
