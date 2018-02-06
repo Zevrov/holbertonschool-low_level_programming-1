@@ -1,13 +1,11 @@
 #include "holberton.h"
 
 /**
- * _strchr - locate character in a string
+ * print_chessboard - print chessboard
  *
- * @s: input pointer
+ * @a: input pointer
  *
- * @c: input character
- *
- * Return: s
+ * Return: a
  */
 void print_chessboard(char (*a)[8])
 {
