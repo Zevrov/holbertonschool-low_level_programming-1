@@ -28,7 +28,7 @@ char *_strstr(char *haystack, char *needle)
 			n_count++;
 			if (haystack[h_count] == needle[n_count])
 				count++;
-			else if (needle[n_count] == '\0')
+			else
 				return (&haystack[h_count - (count + 1)]);
 		}
 	}
