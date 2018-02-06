@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * _strpbrk - get the string in any set of bytes
+ * set_string - set string from pointer
  *
  * @s: input pointer
  *
- * @accept: input accept pointer
+ * @to: input accept pointer
  *
  * Return: s
  */
