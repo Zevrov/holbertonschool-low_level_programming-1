@@ -1,21 +1,23 @@
 #include "holberton.h"
 
 /**
- * _sqrt_recursion - find square root of input
+ * recursion - Where we will have 2 iputs to make the recursion work
  *
  * @n: input number
  *
- * @div; input divider
+ * @div: input divider
  *
  * Return: square root of n
  */
 int recursion(int n, int div)
 {
-	if (div == 0)
+	if (n == 0)
+		return (0);
+	else if (div == 0)
 		return (-1);
 	else if (n < 0)
 		return (-1);
-	else if(div * div != n)
+	else if (div * div != n)
 	{
 		div--;
 		return (recursion(n, div));
