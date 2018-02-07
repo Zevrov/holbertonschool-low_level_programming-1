@@ -11,11 +11,11 @@
  */
 int recursion(int n, int div)
 {
-	if (div < 0)
+	if (div == n)
 		return (-1);
 	else if (div * div != n)
 	{
-		div--;
+		div++;
 		return (recursion(n, div));
 	}
 	return (div);
@@ -30,11 +30,13 @@ int recursion(int n, int div)
  */
 int _sqrt_recursion(int n)
 {
-	int div = n;
+	int div = 2;
 
 	if (n < 0)
 		return (-1);
 	if (n == 0)
 		return (0);
+	if (n == 1)
+		return (1);
 	return (recursion(n, div));
 }
