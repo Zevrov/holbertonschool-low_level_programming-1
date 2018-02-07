@@ -11,11 +11,7 @@
  */
 int recursion(int n, int div)
 {
-	if (n == 0)
-		return (0);
-	else if (div == 0)
-		return (-1);
-	else if (n < 0)
+	if (div < 0)
 		return (-1);
 	else if (div * div != n)
 	{
