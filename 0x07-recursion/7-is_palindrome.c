@@ -1,13 +1,15 @@
 #include "holberton.h"
 
 /**
- * recursion - Where we will have 2 iputs to make the recursion work
+ * compare - compares the two values
  *
- * @n: input number
+ * @s: input string
  *
- * @div: input divider
+ * @c_s: input first part
  *
- * Return: square root of n
+ * @c_e: input last point
+ *
+ * Return: numbers
  */
 int compare(char *s, int c_s, int c_e)
 {
@@ -23,7 +25,9 @@ int compare(char *s, int c_s, int c_e)
  *
  * @s: input string
  *
- * Return: end pointer
+ * @c_e: input first part
+ *
+ * Return: end pointer number
  */
 int end(char *s , int c_e)
 {
