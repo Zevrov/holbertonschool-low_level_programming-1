@@ -29,7 +29,7 @@ int compare(char *s, int c_s, int c_e)
  *
  * Return: end pointer number
  */
-int end(char *s , int c_e)
+int end(char *s, int c_e)
 {
 	if (s[c_e] != '\0')
 		return (end(s, c_e + 1));
@@ -50,8 +50,8 @@ int is_palindrome(char *s)
 	c_e = end(s, c_e);
 	result = compare(s, c_s, c_e - 1);
 	if (result == 0)
-		return(0);
+		return (0);
 	else if ((c_e + 1) / 2 == result)
 		return (1);
-	return(0);
+	return (0);
 }
