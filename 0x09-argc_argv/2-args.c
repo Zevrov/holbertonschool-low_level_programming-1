@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print name of program
+ * main - print out all arguments
  *
  * @argc: size of argv
  *
@@ -11,7 +11,12 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc >= 0)
-		printf("%s\n", argv[0]);
+	int c = 0;
+
+	while (argc > c)
+	{
+		printf("%s\n", argv[c]);
+		c++;
+	}
 	return (0);
 }
