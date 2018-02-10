@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int c = 1, ch = 0;
-	long int num = 0;
+	int num = 0;
 
 	if (argc < 2)
 	{
