@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int c = 1, num = 0;
+	int c = 1, num = 0, ch = 0;
 
 	if (argc == 1)
 	{
@@ -21,15 +21,16 @@ int main(int argc, char *argv[])
 	}
 	while (c < argc)
 	{
-		if (*(argv[c] + 0) >= '0' && *(argv[c] + 0) <= '9')
+		while (*(argv[c] + ch) != '\0')
 		{
-			num += atoi(argv[c]);
+			if (*(argv[c] + ch) <= '0' || *(argv[c] + ch) >= '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			ch++;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		num += atoi(argv[c]);
 		c++;
 	}
 	printf("%d\n", num);
