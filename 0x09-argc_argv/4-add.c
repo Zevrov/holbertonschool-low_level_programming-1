@@ -12,9 +12,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int c = 1, num = 0, ch = 0;
+	int c = 1, ch = 0;
+	long int num = 0;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
 		printf("%d\n", num);
 		return (0);
