@@ -21,11 +21,11 @@ int main(int argc, char *argv[])
 	}
 	while (c < argc)
 	{
-		while (*(argv[c] + ch) != '\0')
+		while (argv[c][ch] != '\0')
 		{
-			if (*(argv[c] + ch) != '-' &&
-			      (*(argv[c] + ch) <= '0' ||
-			       *(argv[c] + ch) >= '9'))
+			if (argv[c][ch] != '-' &&
+			      (argv[c][ch] <= '0' ||
+			       argv[c][ch] >= '9'))
 			{
 				printf("Error\n");
 				return (1);
