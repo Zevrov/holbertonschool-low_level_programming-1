@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - print addition of all arguments
@@ -14,18 +15,11 @@ int main(int argc, char *argv[])
 {
 	int c = 1, ch = 0, num = 0;
 
-	if (argc < 2)
-	{
-		printf("%d\n", num);
-		return (0);
-	}
 	while (c < argc)
 	{
 		while (argv[c][ch] != '\0')
 		{
-			if (argv[c][ch] != '-' &&
-			      (argv[c][ch] <= '0' ||
-			       argv[c][ch] >= '9'))
+			if (!isdigit(argv[c][ch]))
 			{
 				printf("Error\n");
 				return (1);
