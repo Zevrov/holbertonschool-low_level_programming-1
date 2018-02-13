@@ -29,10 +29,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	while (c < len1)
 	{
-		if (s1[c] == '\0')
-			str[c] = ' ';
-		else
-			str[c] = s1[c];
+		str[c] = s1[c];
 		c++;
 	}
 	while (c2 < len2)
