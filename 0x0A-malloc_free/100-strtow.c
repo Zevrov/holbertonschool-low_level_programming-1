@@ -2,13 +2,11 @@
 #include <stdio.h>
 
 /**
- * argstostr - concatenate all the string input
+ * count_height - count height of the string matrix
  *
- * @ac: count arguments
+ * @str: input string
  *
- * @av: input of arguments
- *
- * Return: grid or Null
+ * Return: interger
  */
 int count_height(char *str)
 {
@@ -16,9 +14,9 @@ int count_height(char *str)
 
 	while (str[count] != '\0')
 	{
-		if(str[count] == ' ')
+		if (str[count] == ' ')
 		{
-			if(c_x > 0)
+			if (c_x > 0)
 				c_y++;
 			c_x = 0;
 		}
@@ -32,23 +30,56 @@ int count_height(char *str)
 }
 
 /**
- * argstostr - concatenate all the string input
+ * assign - assign the values
  *
- * @ac: count arguments
+ * @str: count arguments
  *
- * @av: input of arguments
+ * @s: input of arguments
  *
- * Return: grid or Null
+ * Return: pointer to pointer
+ */
+char **assign(char *str, char **s)
+{
+	int counter = 0, c1 = 0, c2 = 0;
+
+	while (str[counter] != '\0')
+	{
+		if (str[counter] == ' ')
+		{
+			if (c2 > 0)
+			{
+				s[c1][c2] = '\0';
+				c1++;
+			}
+			c2 = 0;
+		}
+		else
+		{
+			s[c1][c2] = str[counter];
+			c2++;
+		}
+		counter++;
+	}
+	return (s);
+}
+
+
+/**
+ * strtow - store string in matrix
+ *
+ * @str: input string
+ *
+ * Return: matrix or null
  */
 char **strtow(char *str)
 {
 	char **s;
-	int c_y, c_x = 0, c = 0, count = 0, c1 = 0, c2 = 0, counter = 0;
+	int c_y, c_x = 0, c = 0, count = 0;
 
 	if (str == NULL)
 		return (NULL);
-	c_y = count_height(str) + 1;
-	s = malloc(sizeof(char *) * c_y);
+	c_y = count_height(str);
+	s = malloc(sizeof(char *) * c_y + 1);
 	if (s == NULL)
 	{
 		free(s);
@@ -80,24 +111,5 @@ char **strtow(char *str)
 			c_x++;
 		count++;
 	}
-	while (str[counter] != '\0')
-	{
-		if (str[counter] == ' ')
-		{
-			if(c2 > 0)
-			{
-				s[c1][c2] = '\0';
-				c1++;
-			}
-			c2 = 0;
-		}
-		else
-		{
-			s[c1][c2] = str[counter];
-			c2++;
-		}
-		counter++;
-	}
-	return (s);
-
+	return (assign(str, s));
 }
