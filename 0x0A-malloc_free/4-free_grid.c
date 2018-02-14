@@ -1,0 +1,19 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * free_grid - free all 2 dimensional grid
+ *
+ * @gird: input matrix
+ *
+ * @height: input integer height
+ */
+void free_grid(int **grid, int height)
+{
+	while(0 <= height)
+	{
+		free(grid[height]);
+		height--;
+	}
+	free(grid);
+}
