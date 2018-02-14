@@ -26,7 +26,42 @@ int count_height(char *str)
 		}
 		count++;
 	}
+	if (c_x > 0)
+		c_y++;
 	return (c_y);
+}
+
+/**
+ * check_last - check for the last space needed to be allocated
+ *
+ * @s: input of arguments
+ *
+ * @c_x: input int size of row
+ *
+ * @c: input int count of row
+ *
+ * Return: pointer to pointer
+ */
+char **check_last(char **s, int c_x, int c)
+{
+	if (c_x > 0)
+	{
+		c_x++;
+		s[c] = malloc(sizeof(char) * c_x);
+		if (s[c] == NULL)
+		{
+			while (c >= 0)
+			{
+				free(s[c]);
+				c--;
+			}
+			free(s);
+			return (NULL);
+		}
+		c++;
+	}
+	return (s);
+
 }
 
 /**
@@ -47,10 +82,7 @@ char **assign(char *str, char **s)
 		if (str[counter] == ' ')
 		{
 			if (c2 > 0)
-			{
-				s[c1][c2] = '\0';
 				c1++;
-			}
 			c2 = 0;
 		}
 		else
@@ -62,7 +94,6 @@ char **assign(char *str, char **s)
 	}
 	return (s);
 }
-
 
 /**
  * strtow - store string in matrix
@@ -79,12 +110,9 @@ char **strtow(char *str)
 	if (str == NULL)
 		return (NULL);
 	c_y = count_height(str);
-	s = malloc(sizeof(char *) * c_y + 1);
-	if (s == NULL)
-	{
-		free(s);
+	if (c_y == 0)
 		return (NULL);
-	}
+	s = malloc(sizeof(char *) * c_y + 1);
 	while (str[count] != '\0')
 	{
 		if (str[count] == ' ')
@@ -111,5 +139,6 @@ char **strtow(char *str)
 			c_x++;
 		count++;
 	}
+	s = check_last(s, c_x, c);
 	return (assign(str, s));
 }
