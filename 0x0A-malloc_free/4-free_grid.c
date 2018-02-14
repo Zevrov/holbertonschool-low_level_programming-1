@@ -14,7 +14,7 @@ void free_grid(int **grid, int height)
 
 	if (grid == NULL)
 		free(grid);
-	while (c <= height)
+	while (c < height)
 	{
 		free(grid[c]);
 		c++;
