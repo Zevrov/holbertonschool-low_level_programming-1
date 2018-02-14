@@ -109,10 +109,10 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	c_y = count_height(str);
-	if (c_y == 0)
+	c_y = count_height(str) + 1;
+	if (c_y == 1)
 		return (NULL);
-	s = malloc(sizeof(char *) * c_y + 1);
+	s = malloc(sizeof(char *) * c_y);
 	while (str[count] != '\0')
 	{
 		if (str[count] == ' ')
