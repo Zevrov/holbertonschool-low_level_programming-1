@@ -27,7 +27,6 @@ char *argstostr(int ac, char **av)
 		}
 		c1++;
 	}
-	printf("%d", count_a);
 	str = malloc(sizeof(char) * count_a);
 	if (str == NULL)
 		return (NULL);
