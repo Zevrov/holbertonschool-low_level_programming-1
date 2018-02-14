@@ -27,11 +27,10 @@ char *argstostr(int ac, char **av)
 		}
 		c1++;
 	}
-	count_a = count_a + ac;
+	count_a = count_a + ac + 1;
 	str = malloc(sizeof(char) * count_a);
 	if (str == NULL)
 	{
-		free(str);
 		return (NULL);
 	}
 	for (c1 = 0; c1 < ac; c1++)
