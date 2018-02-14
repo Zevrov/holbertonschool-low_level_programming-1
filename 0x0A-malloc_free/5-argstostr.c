@@ -27,9 +27,13 @@ char *argstostr(int ac, char **av)
 		}
 		c1++;
 	}
+	count_a++;
 	str = malloc(sizeof(char) * count_a);
 	if (str == NULL)
+	{
+		free(str);
 		return (NULL);
+	}
 	for (c1 = 0; c1 < ac; c1++)
 	{
 		for (c2 = 0; av[c1][c2] != '\0'; c2++)
