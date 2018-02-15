@@ -2,15 +2,13 @@
 #include <stdio.h>
 
 /**
- * _memset - fills memory with constant byte
+ * array_range - fills array with numbers
  *
- * @s: input pointer
+ * @min: input minimum number
  *
- * @b: constant byte
+ * @max: input maximum number
  *
- * @n: input int
- *
- * Return: s
+ * Return: int pointer
  */
 int *array_range(int min, int max)
 {
