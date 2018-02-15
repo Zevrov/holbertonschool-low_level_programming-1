@@ -14,7 +14,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-        void *p;
+        int *p;
+	unsigned int count;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -24,5 +25,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
                 free(p);
                 return (NULL);
         }
-        return (p);
+	for (count = 0; count < size * nmemb; count++)
+	{
+		p[count] = 0;
+	}
+        return ((void *)p);
 }
