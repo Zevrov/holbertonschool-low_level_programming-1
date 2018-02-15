@@ -2,20 +2,39 @@
 #include <stdio.h>
 
 /**
- * string_nconcat - concat the two string input
+ * _memset - fills memory with constant byte
  *
- * @s1: input first string
+ * @s: input pointer
  *
- * @s2: input second string
+ * @b: constant byte
  *
- * @n: input number for end
+ * @n: input int
+ *
+ * Return: s
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int count;
+
+	for (count = 0; count < n; count++)
+	{
+		s[count] = b;
+	}
+	return (s);
+}
+
+/**
+ * _calloc - memory allocations
+ *
+ * @nmemb: input memory amount
+ *
+ * @size: input memory size
  *
  * Return: pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-        int *p;
-	unsigned int count;
+        void *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -25,9 +44,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
                 free(p);
                 return (NULL);
         }
-	for (count = 0; count < size * nmemb; count++)
-	{
-		p[count] = 0;
-	}
-        return ((void *)p);
+        _memset((void *)p, 0, nmemb * size);
+        return (p);
 }
