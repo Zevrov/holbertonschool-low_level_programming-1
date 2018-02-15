@@ -2,9 +2,13 @@
 #include <stdio.h>
 
 /**
- * malloc_checked - allocates memory
+ * string_nconcat - concat the two string input
  *
- * @b: input memory byte size
+ * @s1: input first string
+ *
+ * @s2: input second string
+ *
+ * @n: input number for end
  *
  * Return: pointer
  */
