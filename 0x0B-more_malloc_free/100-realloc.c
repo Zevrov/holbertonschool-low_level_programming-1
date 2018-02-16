@@ -25,19 +25,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	ch = malloc(new_size);
-	if (ch == NULL)
-	{
-		free(ch);
-		return (NULL);
-	}
 	if (old_size == new_size)
 		return (ptr);
-	else if (new_size < old_size)
-	{
+	ch = malloc(new_size);
+	if (ch == NULL)
+		return (NULL);
+	if (new_size < old_size)
 		for (c = 0; c < new_size; c++)
 			ch[c] = con[c];
-	}
 	free(ptr);
 	return (ch);
 }
