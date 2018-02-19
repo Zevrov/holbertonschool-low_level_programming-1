@@ -12,12 +12,19 @@
  *
  * Description: input name for the dog and age also the owner
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 };
+
+#endif
+
+
+#ifndef DOGS
+#define DOGS
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
