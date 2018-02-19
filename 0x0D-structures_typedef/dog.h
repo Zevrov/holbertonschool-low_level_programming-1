@@ -12,7 +12,7 @@
  *
  * Description: input name for the dog and age also the owner
  */
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
