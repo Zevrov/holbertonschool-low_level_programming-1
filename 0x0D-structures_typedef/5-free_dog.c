@@ -4,7 +4,7 @@
 /**
  * free_dog - free the dogs
  *
- * @s: input string of dog
+ * @d: input string of dog
  */
 void free_dog(dog_t *d)
 {
