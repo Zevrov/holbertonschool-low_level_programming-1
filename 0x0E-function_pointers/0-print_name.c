@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /**
  * print_name - prints name of input using pointer function
  *
@@ -11,5 +10,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name != NULL)
+		if (f != NULL)
+			f(name);
 }
