@@ -1,0 +1,21 @@
+#ifndef DOG
+#define DOG
+/**
+ * struct dog - elememts of a dog
+ *
+ * @name: First member
+ *
+ * @age: Second member
+ *
+ * @owner: Third member
+ *
+ * Description: input name for the dog and age also the owner
+ */
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
+
+#endif

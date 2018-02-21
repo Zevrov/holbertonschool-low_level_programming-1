@@ -1,0 +1,56 @@
+#include "holberton.h"
+
+/**
+ * print_to_98 - increasing and decreasing until 98
+ *
+ * @n: input
+ *
+ * Return: last digit
+ */
+void print_to_98(int n)
+{
+	int a;
+
+	if (n < 98)
+	{
+		a = n;
+		while (a < 98)
+		{
+			if (a != 98)
+			{
+				if (a / 10 == 0 || (a * -1) / 10 == 0)
+				{
+					_putchar(a + '0');
+					_putchar(',');
+				}
+				else
+				{
+					_putchar(a / 10 + '0');
+					_putchar(a % 10 + '0');
+				}
+			}
+			a++;
+		}
+	}
+	else if (n > 98)
+	{
+		a = n;
+		while (a > 98)
+		{
+			if (a / 10 == 0)
+				_putchar(a + '0');
+			else
+			{
+				_putchar(a / 100 + '0');
+				_putchar(a / 10 + '0');
+				_putchar(a % 10 + '0');
+			}
+			a--;
+		}
+	}
+	else
+	{
+		_putchar('9');
+		_putchar('8');
+	}
+}

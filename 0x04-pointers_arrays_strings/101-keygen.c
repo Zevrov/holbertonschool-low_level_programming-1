@@ -3,12 +3,8 @@
 #include <time.h>
 #include <limits.h>
 
-/**                                                                                                                     * main - Entry point                                                                                                   *                                                                                                                      * Return: Always 0 (Success)                                                                                           */
-int main(void)
+void main(void)
 {
-        int n;
-
-        srand(INT_MAX);
-        n = rand();
-        return (n);
+	printf("B-)\n");
+	return 0;
 }

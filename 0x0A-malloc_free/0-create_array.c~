@@ -1,0 +1,20 @@
+#include "holberton.h"
+#include <stdlib.h>
+
+/**
+ * create_array - creates an array of characters
+ *
+ * @size: input buffer size
+ *
+ * @c: input character
+ */
+char *create_array(unsigned int size, char c)
+{
+	char *str;
+	unsigned int count = 0;
+
+	str = malloc(sizeof(c) * size);
+	while (count < size)
+		str[count] = c;
+	return (str);
+}

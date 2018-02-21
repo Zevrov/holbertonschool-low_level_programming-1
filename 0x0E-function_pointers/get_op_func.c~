@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "calc.h"
+
+/**
+ * int_index - this function will find matches
+ *
+ * @s: get operation function depending on call
+ *
+ * Return: return -1 if nothing matches or return the location number
+ */
+int (*get_op_func(char *s))(int, int)
+{
+	
+}

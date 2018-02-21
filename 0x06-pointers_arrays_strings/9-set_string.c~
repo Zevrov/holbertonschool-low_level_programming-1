@@ -1,0 +1,15 @@
+#include "holberton.h"
+
+/**
+ * _strpbrk - get the string in any set of bytes
+ *
+ * @s: input pointer
+ *
+ * @accept: input accept pointer
+ *
+ * Return: s
+ */
+void set_string(char **s, char *to)
+{
+	&*s = &to;
+}
