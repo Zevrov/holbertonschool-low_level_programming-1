@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * main - do simple math
@@ -21,11 +21,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (c != '+' &&
+	if ((c != '+' &&
 	    c != '-' &&
 	    c != '*' &&
 	    c != '/' &&
-	    c != '%')
+	    c != '%') ||
+	    argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
