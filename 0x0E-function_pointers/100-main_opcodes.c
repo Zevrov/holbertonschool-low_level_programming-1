@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int b = 0, c = 0;
+	char *ad;
 
 	if (argc != 2)
 	{
@@ -25,11 +26,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	while (c < b)
+	ad = (char *)&main;
+	while (c < b - 1)
 	{
-		printf("%02hhx ", ((int *)&main)[c]);
+		printf("%02hhx ", ad[c]);
 		c++;
 	}
-	printf("%02hhx\n", ((int *)&main)[c]);
+	printf("%02hhx\n", ad[c]);
 	return (0);
 }
