@@ -1,0 +1,1 @@
+This project includes simple examples of using variadic functions
