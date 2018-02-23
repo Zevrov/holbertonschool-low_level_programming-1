@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * sum_them_all - summ all the integers input
+ * print_numbers - print numbers
  *
  * @separator: input seperator string
  *
