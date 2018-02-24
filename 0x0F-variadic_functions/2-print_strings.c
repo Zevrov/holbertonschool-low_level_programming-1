@@ -14,10 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list list;
 	unsigned int c;
 	char *s;
-	char *nil = "(nil)";
 
-	if (n == 0)
-		return;
 	va_start(list, n);
 	for (c = 0; c < n; c++)
 	{
@@ -28,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			printf("%s", nil);
+			printf("(nil)");
 		}
 		if (separator != NULL && c < n - 1)
 			printf("%s",separator);
