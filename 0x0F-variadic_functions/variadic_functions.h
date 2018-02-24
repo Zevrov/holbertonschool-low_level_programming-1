@@ -2,6 +2,16 @@
 #define VARIADIC_FUNCTIONS
 #include <stdarg.h>
 
+
+/**
+ * struct form - stuct to get format
+ *
+ * @c: character of format
+ *
+ * @f: pointer function
+ *
+ * Description: it call the right function depending on the fomrat
+ */
 typedef struct form
 {
 	char c;
