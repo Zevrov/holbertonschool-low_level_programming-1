@@ -41,6 +41,7 @@ void p_float(va_list list)
 void p_string(va_list list)
 {
 	char *s = va_arg(list, char *);
+
 	if (s == NULL)
 	{
 		printf("(nil)");
@@ -67,10 +68,10 @@ void print_all(const char * const format, ...)
 	char *s1 = "", *s2 = ", ";
 
 	va_start(list, format);
-	while (format[c1] != '\0')
+	while (format != NULL && format[c1] != '\0')
 	{
 		c2 = 0;
-	        while (forms[c2].c != '\0')
+		while (forms[c2].c != '\0')
 		{
 			if (format[c1] == forms[c2].c)
 			{
