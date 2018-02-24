@@ -3,21 +3,41 @@
 #include <stdlib.h>
 #include "variadic_functions.h"
 
+/**
+ * p_char - print character
+ *
+ * @list: list of arguments
+ */
 void p_char(va_list list)
 {
 	printf("%c", va_arg(list, int));
 }
 
+/**
+ * p_int - print integer
+ *
+ * @list: list of arguments
+ */
 void p_int(va_list list)
 {
 	printf("%d", va_arg(list, int));
 }
 
+/**
+ * p_float - print floats
+ *
+ * @list: list of arguments
+ */
 void p_float(va_list list)
 {
 	printf("%f", va_arg(list, double));
 }
 
+/**
+ * p_string - print strings
+ *
+ * @list: list of arguments
+ */
 void p_string(va_list list)
 {
 	char *s = va_arg(list, char *);
@@ -29,9 +49,9 @@ void p_string(va_list list)
 	printf("%s", s);
 }
 /**
- * print_numbers - print numbers
+ * print_all - print everything
  *
- * @format: format of the character
+ * @format: format of arguments
  */
 void print_all(const char * const format, ...)
 {
@@ -44,23 +64,24 @@ void print_all(const char * const format, ...)
 	};
 	va_list list;
 	int c1 = 0, c2 = 0;
+	char *s1 = "", *s2 = ", ";
 
 	va_start(list, format);
 	while (format[c1] != '\0')
 	{
 		c2 = 0;
-		while (forms[c2].c != '\0' && format[c1] != forms[c2].c)
+	        while (forms[c2].c != '\0')
 		{
+			if (format[c1] == forms[c2].c)
+			{
+				printf("%s", s1);
+				forms[c2].f(list);
+				s1 = s2;
+			}
 			c2++;
-		}
-		if (format[c1 + 1] != '\0' && format[c1] == forms[c2].c)
-		{
-			forms[c2].f(list);
-			printf(", ");
 		}
 		c1++;
 	}
-	forms[c2].f(list);
 	printf("\n");
 	va_end(list);
 }
