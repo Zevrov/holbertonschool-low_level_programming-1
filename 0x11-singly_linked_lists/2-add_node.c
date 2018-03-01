@@ -1,11 +1,13 @@
 #include "lists.h"
 
 /**
- * print_list - print the items in linked list
+ * add_node - add new node in linked list
  *
- * @h: input of linked list
+ * @head: input head address
  *
- * Return: count of the nodes
+ * @str: input string
+ *
+ * Return: dereference of head
  */
 list_t *add_node(list_t **head, const char *str)
 {
