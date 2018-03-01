@@ -1,0 +1,1 @@
+This project contains examples of how to make use of linked lists
