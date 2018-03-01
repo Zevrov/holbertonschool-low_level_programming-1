@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - print the items in linked list
+ * list_len - count the listed items in the linked list
  *
  * @h: input of linked list
  *
