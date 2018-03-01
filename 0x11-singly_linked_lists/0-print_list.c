@@ -1,9 +1,11 @@
 #include "lists.h"
 
 /**
+ * print_list - print the items in linked list
  *
+ * @h: input of linked list
  *
- *
+ * Return: count of the nodes
  */
 size_t print_list(const list_t *h)
 {
