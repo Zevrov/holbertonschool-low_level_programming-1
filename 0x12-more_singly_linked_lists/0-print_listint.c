@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - print the items in linked list
+ * print_listint - print the list of numbers
  *
  * @h: input of linked list
  *
