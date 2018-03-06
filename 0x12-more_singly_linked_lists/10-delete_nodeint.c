@@ -19,9 +19,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	if (index == 0)
 	{
-		next_n = (*head)->next;
+		holder = (*head)->next;
 		free(*head);
-		*head = next_n;
+		*head = holder;
 		return (1);
 	}
 	count = 1;
