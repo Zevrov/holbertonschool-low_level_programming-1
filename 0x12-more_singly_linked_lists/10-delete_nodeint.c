@@ -1,7 +1,5 @@
 #include "lists.h"
 
-#include "lists.h"
-
 /**
  * pop_listint - delete the first node
  *
@@ -15,6 +13,8 @@ int pop_listint(listint_t **head)
 	listint_t *next_n;
 
 	if (head == NULL)
+		return (0);
+	if (*head == NULL)
 		return (0);
 	next_n = (*head)->next;
 	n = (*head)->n;
@@ -45,7 +45,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	n_head = *head;
 	while (count < index)
 	{
-		if (n_head->next == NULL)
+		if (n_head == NULL)
 			return (-1);
 		n_head = n_head->next;
 		count++;
