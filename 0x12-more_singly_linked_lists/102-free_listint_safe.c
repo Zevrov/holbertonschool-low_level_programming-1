@@ -22,7 +22,7 @@ size_t free_listint_safe(listint_t **h)
 		n = 0;
 		while (n < count)
 		{
-			if (n_h == n_head)
+			if (n_h == n_head->next)
 			{
 				n_head->next = NULL;
 				break;
