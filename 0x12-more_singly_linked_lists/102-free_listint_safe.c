@@ -17,7 +17,6 @@ size_t free_listint_safe(listint_t **h)
 	n_head = *h;
 	while (n_head != NULL)
 	{
-		n_head = n_head->next;
 		count++;
 		n_h = *h;
 		n = 0;
@@ -25,7 +24,7 @@ size_t free_listint_safe(listint_t **h)
 		{
 			if (n_h == n_head)
 			{
-				n_head = NULL;
+				n_head->next = NULL;
 				break;
 			}
 			else
@@ -34,16 +33,14 @@ size_t free_listint_safe(listint_t **h)
 				n++;
 			}
 		}
-		free(n_h);
+		n_head = n_head->next;
 	}
-	free(n_head);
-	while (*h == NULL)
+	while (*h != NULL)
 	{
 		holder = (*h)->next;
 		free(*h);
 		*h = holder;
 		c++;
 	}
-	*h = NULL;
 	return (c);
 }
