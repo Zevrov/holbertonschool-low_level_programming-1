@@ -7,7 +7,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 4611686018427387904;
+	unsigned long int mask = 9223372036854775808ul;
 	int t = 0;
 
 	if (n == 0)
