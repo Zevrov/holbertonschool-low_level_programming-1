@@ -9,8 +9,8 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int count = 0, pow2 = 1;
-	unsigned int num = 0;
+	int count = 0;
+	unsigned int num = 0, pow2 = 1;
 
 	if (b == NULL)
 		return (0);
