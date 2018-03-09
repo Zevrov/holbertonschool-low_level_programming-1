@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * set_bit - set a bit 1 in a given index
+ * flip_bits - flip the bits
  *
- * @n: input adress of number
+ * @n: input long int
  *
- * @index: the index of the binary
+ * @m: input long int
  *
- * Return: 1 if succese and -1 if fails
+ * Return: compare and return the flipped numbers
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
