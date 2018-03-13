@@ -7,7 +7,7 @@
  *
  * @letters: input number of letter it should print
  *
- * Return: Always 0.
+ * Return: Always 0 if failes or the size of the print
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
