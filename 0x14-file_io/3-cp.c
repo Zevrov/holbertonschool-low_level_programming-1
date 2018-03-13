@@ -22,25 +22,26 @@ int main(int argc, char *argv[])
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n",
-			argv[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n",
-			argv[2]);
+		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while ((check = read(fd1, buf, 1024)) > 0)
 	{
-		if (check < 1024)
-			buf[check] = '\0';
-		if (write(fd2, buf, check) != check)
+		if (check == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n",
-				argv[2]);
+			dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		check = write(fd2, buf, check);
+		if (check == -1)
+		{
+			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
