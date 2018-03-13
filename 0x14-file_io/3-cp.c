@@ -34,12 +34,16 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	while ((check = read(fd1, buf, 1024)) > 0)
+	{
+		if (check < 1024)
+			buf[check] = '\0';
 		if (write(fd2, buf, check) != check)
 		{
 			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n",
 				argv[2]);
 			exit(99);
 		}
+	}
 	if (close(fd1) == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fd1);
