@@ -1,0 +1,1 @@
+This project contains simple eamples of doubly linked lists
