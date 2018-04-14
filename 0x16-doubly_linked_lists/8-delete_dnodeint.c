@@ -12,7 +12,7 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *holder, *hold_n;
-	unsigned int c = 1;
+	unsigned int c = 0;
 
 	if (head == NULL || *head == NULL)
 		return (-1);
@@ -24,16 +24,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		*head = hold_n;
 		return (1);
 	}
-	while (holder->next != NULL && c < index)
+	while (holder != NULL && c < index)
 	{
 		holder = holder->next;
 		c++;
 	}
-	if (holder->next != NULL)
+	if (holder != NULL)
 	{
-		hold_n = holder->next->next;
-		free(holder->next);
-		holder->next = hold_n;
+		holder->prev->next = holder->next;
+		holder->next->prev = holder->prev;
+		free(holder);
 		return (1);
 	}
 	return (-1);
