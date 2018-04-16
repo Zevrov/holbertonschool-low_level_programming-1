@@ -1,0 +1,1 @@
+This project contains examples of making dynamic libraries
