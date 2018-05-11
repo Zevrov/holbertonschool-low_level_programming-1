@@ -19,19 +19,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || value == NULL || key == NULL || strcmp(key, "") == 0)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
-	if (ht->array[index] != NULL)
+	holder = ht->array[index];
+	while (holder != NULL)
 	{
-		holder = ht->array[index];
-		while (holder != NULL)
+		if (strcmp(holder->key, key) == 0)
 		{
-			if (strcmp(holder->key, key) == 0)
-			{
-				free(new->value);
-				holder->value = strdup(value);
-				return (1);
-			}
-			holder = holder->next;
+			free(new->value);
+			holder->value = strdup(value);
+			return (1);
 		}
+		holder = holder->next;
 	}
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
