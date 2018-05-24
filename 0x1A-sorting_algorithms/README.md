@@ -1,0 +1,1 @@
+This project contains C exmaples of sorting algorithm
