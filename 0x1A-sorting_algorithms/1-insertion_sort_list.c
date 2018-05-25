@@ -1,15 +1,16 @@
 #include "sort.h"
 
 /**
- *
- *
- *
+ * insertion_sort_list - sort linked list using insertion method
+ * @list: input linked list
  */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *holder, *node_holder;
 	int flag;
 
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		return;
 	current = (*list)->next;
 	while (current != NULL)
 	{
