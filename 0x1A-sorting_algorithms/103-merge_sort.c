@@ -48,13 +48,13 @@ int *list_dup(int *array, size_t size)
  * @mid: mid of the array
  * @max: end of array
  */
-void top_down(int *A, int *B, size_t min, size_t mid, size_t max)
+ void top_down(int *A, int *B, size_t min, size_t mid, size_t max)
 {
 	size_t i = min, j = mid, k;
 
 	for (k = min; k < max; k++)
 	{
-		if (i < mid && (j >= max || A[i] <= A[j]))
+		if (i < mid && (j >= max || A[i] < A[j]))
 		{
 			B[k] = A[i];
 			i++;
