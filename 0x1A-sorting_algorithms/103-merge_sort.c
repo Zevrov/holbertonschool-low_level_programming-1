@@ -66,7 +66,7 @@ void top_down(int *A, int *B, size_t min, size_t mid, size_t max)
 }
 
 /**
- * top_down - merge using top down method
+ * top_down_split - split into 2
  * @A: input left array
  * @B: input right array
  * @min: start of array
