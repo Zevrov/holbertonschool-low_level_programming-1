@@ -3,6 +3,8 @@
 /**
  * swapper - swapping a linked list
  * @holder: current location of linked list
+ * @list: list of the entire linked list
+ * Return: current location of linked list
  */
 listint_t *swapper(listint_t *holder, listint_t **list)
 {
