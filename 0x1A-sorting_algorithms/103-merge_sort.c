@@ -22,7 +22,7 @@ void print_parts(int *array, size_t min, size_t max)
  * list_dup - duplicates a list
  * @array: input array
  * @size: size of array
- * Return: duplicated list
+ * Return: duplicated list NULL if fails
  */
 int *list_dup(int *array, size_t size)
 {
@@ -30,6 +30,8 @@ int *list_dup(int *array, size_t size)
 	int *new;
 
 	new = malloc(sizeof(int) * size);
+	if (new == NULL)
+		return (NULL);
 	while (i < size)
 	{
 		new[i] = array[i];
@@ -103,6 +105,8 @@ void merge_sort(int *array, size_t size)
 	if (size == 0 || size == 1)
 		return;
 	newlist = list_dup(array, size);
+	if (newlist == NULL)
+		return;
 	top_down_split(newlist, array, 0, size);
 	free(newlist);
 }
