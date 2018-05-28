@@ -8,36 +8,17 @@
  */
 void print_parts(int *array, size_t min, size_t max)
 {
-	while (min < max)
+	size_t i;
+
+	i = min;
+	while (i < max)
 	{
-		printf("%d", array[min]);
-		if (min < max - 1)
+		if (i > min)
 			printf(", ");
-		min++;
-	}
-	printf("\n");
-}
-
-/**
- * list_dup - duplicates a list
- * @array: input array
- * @size: size of array
- * Return: duplicated list NULL if fails
- */
-int *list_dup(int *array, size_t size)
-{
-	size_t i = 0;
-	int *new;
-
-	new = malloc(sizeof(int) * size);
-	if (new == NULL)
-		return (NULL);
-	while (i < size)
-	{
-		new[i] = array[i];
+		printf("%d", array[i]);
 		i++;
 	}
-	return (new);
+	printf("\n");
 }
 
 /**
@@ -48,13 +29,18 @@ int *list_dup(int *array, size_t size)
  * @mid: mid of the array
  * @max: end of array
  */
- void top_down(int *A, int *B, size_t min, size_t mid, size_t max)
+void top_down(int *A, int *B, size_t min, size_t mid, size_t max)
 {
 	size_t i = min, j = mid, k;
 
+	printf("Merging...\n");
+	printf("[left]: ");
+	print_parts(A, min, mid);
+	printf("[right]: ");
+	print_parts(A, mid, max);
 	for (k = min; k < max; k++)
 	{
-		if (i < mid && (j >= max || A[i] < A[j]))
+		if (i < mid && (j >= max || A[i] <= A[j]))
 		{
 			B[k] = A[i];
 			i++;
@@ -65,6 +51,10 @@ int *list_dup(int *array, size_t size)
 			j++;
 		}
 	}
+	printf("[Done]: ");
+	print_parts(B, min, max);
+	for (k = min; k < max; k++)
+		A[k] = B[k];
 }
 
 /**
@@ -74,7 +64,7 @@ int *list_dup(int *array, size_t size)
  * @min: start of array
  * @max: end of array
  */
-void top_down_split(int *B, int *A, size_t min, size_t max)
+void top_down_split(int *A, int *B, size_t min, size_t max)
 {
 	size_t mid;
 
@@ -83,14 +73,7 @@ void top_down_split(int *B, int *A, size_t min, size_t max)
 	mid = (min + max) / 2;
 	top_down_split(A, B, min, mid);
 	top_down_split(A, B, mid, max);
-	printf("Merging...\n");
-	printf("[left]: ");
-	print_parts(A, min, mid);
-	printf("[right]: ");
-	print_parts(B, mid, max);
-	top_down(B, A, min, mid, max);
-	printf("[Done]: ");
-	print_parts(A, min, max);
+	top_down(A, B, min, mid, max);
 }
 
 /**
@@ -104,9 +87,9 @@ void merge_sort(int *array, size_t size)
 
 	if (size == 0 || size == 1)
 		return;
-	newlist = list_dup(array, size);
+	newlist = malloc(sizeof(int) * size);
 	if (newlist == NULL)
 		return;
-	top_down_split(newlist, array, 0, size);
+	top_down_split(array, newlist, 0, size);
 	free(newlist);
 }
