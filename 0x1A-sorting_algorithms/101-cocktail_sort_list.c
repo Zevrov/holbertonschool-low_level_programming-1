@@ -3,9 +3,8 @@
 /**
  * swapper - swapping a linked list
  * @holder: current location of linked list
- * Return: return the new pointer
  */
-listint_t *swapper(listint_t *holder)
+listint_t *swapper(listint_t *holder, listint_t **list)
 {
 	listint_t *node_holder;
 
@@ -18,6 +17,8 @@ listint_t *swapper(listint_t *holder)
 		holder->next->prev = holder->prev;
 	holder->next = holder->prev;
 	holder->prev = node_holder;
+	if (holder->prev == NULL)
+		*list = holder;
 	return (holder);
 }
 
@@ -27,28 +28,36 @@ listint_t *swapper(listint_t *holder)
  */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *current, *holder;
-	int flag;
+	listint_t *current;
+	int flag = 1;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	current = (*list)->next;
-	while (current != NULL)
+	current = *list;
+	while (flag)
 	{
-		holder = current;
-		while (holder->prev != NULL)
+		flag = 0;
+		while (current->next != NULL)
 		{
-			flag = 0;
-			if (holder->n < holder->prev->n)
+			if (current->n > current->next->n)
 			{
-				holder = swapper(holder);
-				if (holder->prev == NULL)
-					*list = holder;
+				current = swapper(current->next, list);
 				print_list(*list);
 				flag = 1;
 			}
-			if (flag == 0)
-				holder = holder->prev;
+			current = current->next;
+		}
+		current = current->prev;
+		while (current->prev != NULL)
+		{
+			if (current->n < current->prev->n)
+			{
+				current = swapper(current, list);
+				print_list(*list);
+				flag = 1;
+			}
+			else if (current->prev != NULL)
+				current = current->prev;
 		}
 		current = current->next;
 	}
