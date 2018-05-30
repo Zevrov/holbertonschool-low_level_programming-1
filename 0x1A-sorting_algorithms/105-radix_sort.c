@@ -22,7 +22,7 @@ void c_counting_sort(int *array, size_t size, int pow)
 		counter[(array[i] / pow) % 10]++;
 	for (i = 1; i < max; i++)
 		counter[i] += counter[i - 1];
-	for (i = size - 1; int(i) >= 0; i--)
+	for (i = size - 1; (int)i >= 0; i--)
 	{
 		holder = (copy[i] / pow) % 10;
 		array[counter[holder] - 1] = copy[i];
