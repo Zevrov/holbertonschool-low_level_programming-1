@@ -12,7 +12,7 @@ int partition(int *array, int low, int high, size_t size)
 {
 	int pivot, holder, i, j;
 
-	pivot = array[low];
+	pivot = array[high];
 	i = low - 1;
 	j = high + 1;
 	while (1)
@@ -23,14 +23,13 @@ int partition(int *array, int low, int high, size_t size)
 		do
 			j--;
 		while (array[j] > pivot);
-		if (i >= j)
+		if (i > j)
 			return (j);
 		holder = array[i];
 		array[i] = array[j];
 		array[j] = holder;
 		print_array(array, size);
 	}
-	return (0);
 }
 
 /**
