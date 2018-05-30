@@ -25,6 +25,8 @@ int partition(int *array, int low, int high, size_t size)
 		while (array[j] > pivot);
 		if (i > j)
 			return (j);
+		if (i == j)
+			return (j - 1);
 		holder = array[i];
 		array[i] = array[j];
 		array[j] = holder;
