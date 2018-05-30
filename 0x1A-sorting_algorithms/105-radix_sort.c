@@ -9,7 +9,7 @@
 void c_counting_sort(int *array, size_t size, int pow)
 {
 	size_t max = 10, i;
-	int counter[10], *copy, holder, j;
+	int counter[10], *copy, holder;
 
 	for (i = 0; i < max; i++)
 		counter[i] = 0;
@@ -22,10 +22,10 @@ void c_counting_sort(int *array, size_t size, int pow)
 		counter[(array[i] / pow) % 10]++;
 	for (i = 1; i < max; i++)
 		counter[i] += counter[i - 1];
-	for (j = size - 1; j >= 0; j--)
+	for (i = size - 1; int(i) >= 0; i--)
 	{
-		holder = (copy[j] / pow) % 10;
-		array[counter[holder] - 1] = copy[j];
+		holder = (copy[i] / pow) % 10;
+		array[counter[holder] - 1] = copy[i];
 		counter[holder]--;
 	}
 	free(copy);
@@ -40,12 +40,12 @@ void radix_sort(int *array, size_t size)
 {
 	size_t i, max;
 
+	if (size == 0 || size == 1)
+		return;
 	max = array[0];
 	for (i = 0; i < size; i++)
 		if (array[i] > (int)max)
 			max = array[i];
-	if (size == 0 || size == 1)
-		return;
 	for (i = 1; max / i > 0; i *= 10)
 	{
 		c_counting_sort(array, size, i);
