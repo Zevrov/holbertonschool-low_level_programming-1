@@ -1,1 +1,1 @@
-This project contains C exmaples of sorting algorithm
+This project contains C exmaples of sorting algorithm and the Big O 
