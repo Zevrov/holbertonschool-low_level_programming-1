@@ -11,23 +11,24 @@
 int search(int *array, size_t s, size_t e, int value)
 {
 	size_t c = 0, m = 0;
-	char *delm = " ";
+	char *delm;
 
 	if (s >= e)
 		return (-1);
 	printf("Searching in array:");
-	for (c = s; c <= e; c++)
+	delm = " ";
+	for (c = s; c < e; c++)
 	{
 		printf("%s%d", delm, array[c]);
 		delm = " ,";
 	}
 	printf("\n");
-	m = (s + e) / 2;
+	m = (e - s - 1) / 2 + s;
 	if (array[m] == value)
 		return (m);
 	if (array[m] < value)
 		return (search(array, m + 1, e, value));
-	return (search(array, s, m - 1, value));
+	return (search(array, s, m, value));
 }
 
 
@@ -42,5 +43,5 @@ int binary_search(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
-	return (search(array, 0, size - 1, value));
+	return (search(array, 0, size, value));
 }
