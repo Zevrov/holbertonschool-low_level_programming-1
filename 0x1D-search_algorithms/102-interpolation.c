@@ -25,13 +25,13 @@ int interpolation_search(int *array, size_t size, int value)
 		else if (array[m] > value)
 			h = m - 1;
 		else
-			return m;
+			return (m);
 	}
 	m = l + (((double)(h - l) /
 		  (array[h] - array[l])) * (value - array[l]));
 	printf("Value checked array[%lu] is out of range\n", m);
 	if (array[l] == value)
-		return l;
+		return (l);
 	else
-		return -1;
+		return (-1);
 }
