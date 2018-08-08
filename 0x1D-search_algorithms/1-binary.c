@@ -11,9 +11,9 @@
 int search(int *array, size_t s, size_t e, int value)
 {
 	size_t c = 0, m = 0;
-	char* delm = " ";
+	char *delm = " ";
 
-	if (s > e)
+	if (s >= e)
 		return (-1);
 	printf("Searching in array:");
 	for (c = s; c <= e; c++)
