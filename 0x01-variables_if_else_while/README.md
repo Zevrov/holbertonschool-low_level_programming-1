@@ -195,5 +195,6 @@ Write a program that prints all possible combinations of two two-digit numbers.
 * You are not allowed to use any variable of type char
 * All your code should be in the main function
 
-## AUTHOR
-### Kevin Yook
+## Author
+### Kevin Yook 
+Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
