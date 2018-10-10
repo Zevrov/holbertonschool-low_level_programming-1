@@ -57,4 +57,4 @@ Project that are int ** are not included in this repository and is in a seperate
 Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
 
 
-- All collaborators will be mentioned in each project
+* All collaborators will be mentioned in each project
