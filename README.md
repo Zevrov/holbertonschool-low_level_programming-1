@@ -4,5 +4,5 @@
 
 # Low Level Programming & Algorithms
 
-![C](https://github.com/yook00627/holbertonschool-low_level_programming/blob/master/c-programming.png)
+![C](https://github.com/yook00627/holbertonschool-low_level_programming/blob/master/c-programming.png width="200" height="200")
 
