@@ -49,4 +49,4 @@ This repository contains example projects using lower level programming language
 30. [0x1D-search_algorithms](./0x1D-search_algorithms)
 
 ## Author
-Kevin Yook <yook00627@gmail.com> [@yook00627](https://twitter.com/yook00627)
+Kevin Yook Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
