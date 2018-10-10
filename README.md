@@ -4,5 +4,5 @@
 
 # Low Level Programming & Algorithms
 
-![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/212/cisfun.jpg)
+![C](https://github.com/yook00627/holbertonschool-low_level_programming/blob/master/c-programming.png)
 
