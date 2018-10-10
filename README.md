@@ -14,7 +14,11 @@
 * [Author](#author)
 
 ## About
-This repository contains example projects using lower level programming languages like C. 
+This repository contains example projects using lower level programming languages like C. In these projects we learned how to:
+  - compile code and process of compilation
+  - creating and using libraries
+  - using header files
+  - learning search and sorting algorithms
 
 ## Projects
 Project that are int ** are not included in this repository and is in a seperated repository
@@ -53,4 +57,5 @@ Project that are int ** are not included in this repository and is in a seperate
 ### Kevin Yook 
 Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
 
-All collaborators will be mentioned in each project
+
+- All collaborators will be mentioned in each project
