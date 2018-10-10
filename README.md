@@ -6,7 +6,7 @@
 
 <img alt="C" src=https://github.com/yook00627/holbertonschool-low_level_programming/blob/master/c-programming.png>
 
-## Documentation
+# Documentation
 
 ## Table of Content
 * [About](#about)
@@ -18,7 +18,6 @@ This repository contains example projects using lower level programming language
   - compile code and process of compilation
   - creating and using libraries
   - using header files
-  - learning search and sorting algorithms
 
 ## Projects
 Project that are int ** are not included in this repository and is in a seperated repository
