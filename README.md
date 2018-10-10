@@ -16,7 +16,7 @@
 ## About
 This repository contains example projects using lower level programming languages like C. 
 
-##projects
+## Projects
 1. [0x00-hello_world](./0x00-hello_world)
 2. [0x01-variables_if_else_while](./0x01-variables_if_else_while)
 3. [0x02-functions_nested_loops](./0x02-functions_nested_loops)
@@ -48,5 +48,5 @@ This repository contains example projects using lower level programming language
 29. [0x1C-binary_trees](./0x1C-binary_trees)
 30. [0x1D-search_algorithms](./0x1D-search_algorithms)
 
-##Author
-Kevin Yook <yook00627@gmail.com> 
+## Author
+Kevin Yook <yook00627@gmail.com> [@yook00627](https://twitter.com/yook00627)
