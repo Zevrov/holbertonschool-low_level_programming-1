@@ -101,5 +101,6 @@ Write a C program that prints exactly and that piece of art is useful"
 * Your program should return 1
 * Your program should compile without any warnings when using the -Wall gcc option
 
-## AUTHOR
-### Kevin Yook
+## Author
+### Kevin Yook 
+Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
