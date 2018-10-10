@@ -1,6 +1,6 @@
 ## Holbertonschool-low_level_programming
 
-!["Holberton Logo"](https://techcrunch.com/wp-content/uploads/2015/11/holberton-logo-horizontal.jpg?w=730&crop=1){:height="700px" width="400px"}
+<img src="https://techcrunch.com/wp-content/uploads/2015/11/holberton-logo-horizontal.jpg?w=730&crop=1" width="100" height="100">
 
 # Low Level Programming & Algorithms
 
