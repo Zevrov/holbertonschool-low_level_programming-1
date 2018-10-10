@@ -149,5 +149,6 @@ starting with 1 and 2, followed by a new line.
   structures
 * You are not allowed to hard code any Fibonacci number (except for 1 and 2)
 
-## AUTHOR
-### Kevin Yook
+## Author
+### Kevin Yook 
+Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
