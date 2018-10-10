@@ -50,7 +50,7 @@ Project that are int ** are not included in this repository and is in a seperate
 30. [0x1D-search_algorithms](./0x1D-search_algorithms)
 
 ## Author
-###Kevin Yook 
+### Kevin Yook 
 Email: <yook00627@gmail.com> Twitter: [@yook00627](https://twitter.com/yook00627)
 
 All collaborators will be mentioned in each project
