@@ -18,6 +18,7 @@ This repository contains example projects using lower level programming language
   - compile code and process of compilation
   - creating and using libraries
   - using header files
+  - bash scripting
 
 ## Projects
 Project that are int ** are not included in this repository and is in a seperated repository
