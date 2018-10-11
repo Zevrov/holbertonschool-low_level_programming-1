@@ -14,7 +14,7 @@
 
 ## Exercises
 
-[0. isupper](./0-isupper.c)
+[0-isupper.c](./0-isupper.c)
 ```
 Write a function that checks for uppercase character.
 ```
