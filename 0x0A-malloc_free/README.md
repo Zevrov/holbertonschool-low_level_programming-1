@@ -47,104 +47,34 @@ Write a function that returns a pointer to a 2 dimensional array of integers.
 * The function should return NULL on failure
 * If width or height is 0 or negative, return NULL
 
-[4-print_most_numbers.c](./4-print_most_numbers.c)
+[4-free_grid.c](./4-free_grid.c)
 ```
-I believe in numbers and signs
-Write a function that prints the numbers, from 0 to 9, followed by a new line.
+Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
 ```
-* Prototype: void print_most_numbers(void);
-* Do not print 2 and 4
-* You can only use _putchar twice in your code
+* Prototype: void free_grid(int **grid, int height);
+* Your program should not crash if the grid is invalid (NULL or size = 0)
+* Note that we will compile with your alloc_grid.c file. Make sure it compiles.
 
-[5-more_numbers.c](./5-more_numbers.c)
+[5-argstostr.c](./5-argstostr.c)
 ```
-Numbers constitute the only universal language
-Write a function that prints 10 times the numbers, from 0 to 14,
-followed by a new line.
+Write a function that concatenates all the arguments of your program.
 ```
-*  Prototype: void more_numbers(void);
-* You can only use _putchar three times in your code
+* Prototype: char *argstostr(int ac, char **av);
+* Returns NULL if ac == 0 or av == NULL
+* Returns a pointer to a new string, or NULL if it fails
+* Each argument should be followed by a \n in the new string
 
-[6-print_line.c](./6-print_line.c)
+[100-strtow.c](./100-strtow.c)
 ```
-The shortest distance between two points is a straight line
-Write a function that draws a straight line in the terminal.
+Write a function that splits a string into words.
 ```
-* Prototype: void print_line(int n);
-* You can only use _putchar function to print
-* Where n is the number of times the character _ should be printed
-* The line should end with a \n
-* If n is 0 or less, the function should only print \n
-
-[7-print_diagonal.c](./7-print_diagonal.c)
-```
-I feel like I am diagonally parked in a parallel universe
-Write a function that draws a diagonal line on the terminal.
-```
-* Prototype: void print_diagonal(int n);
-* You can only use _putchar function to print
-* Where n is the number of times the character \ should be printed
-* The diagonal should end with a \n
-* If n is 0 or less, the function should only print a \n
-
-[8-print_square.c](./8-print_square.c)
-```
-You are so much sunshine in every square inch
-Write a function that prints a square, followed by a new line.
-```
-* Prototype: void print_square(int size);
-* You can only use _putchar function to print
-* Where size is the size of the square
-* If size is 0 or less, the function should print only a new line
-* Use the character # to print the square
-
-[9-fizz_buzz.c](./9-fizz_buzz.c)
-```
-The “Fizz-Buzz test” is an interview question designed to help filter out the
-99.5% of programming job candidates who can’t seem to program their way out of
-a wet paper bag.
-Write a program that prints the numbers from 1 to 100, followed by a new line.
-```
-* But for multiples of three print Fizz instead of the number and for the
-  multiples of five print Buzz. For numbers which are multiples of both three and
-  five print FizzBuzz.
-
-* Each number or word should be separated by a space
-* You are allowed to use the standard library
-
-[10-print_triangle.c](./10-print_triangle.c)
-```
-Write a function that prints a triangle, followed by a new line.
-```
-* Prototype: void print_triangle(int size);
-* You can only use _putchar function to print
-* Where size is the size of the triangle
-* If size is 0 or less, the function should print only a new line
-* Use the character # to print the triangle
-
-[100-prime_factor.c](./100-prime_factor.c)
-```
-The problem of distinguishing prime numbers from composite numbers and of
-resolving the latter into their prime factors is known to be one of the most
-important and useful in arithmetic
-The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
-Write a program that finds and prints the largest prime factor of the number
-612852475143, followed by a new line.
-```
-* You are allowed to use the standard library
-* Your program will be compiled with this command: gcc -Wall -pedantic -Werror -
-* Wextra 100-prime_factor.c -o 100-prime_factor -lm
-
-[101-print_number.c](./101-print_number.c)
-```
-Numbers have life; they're not just symbols on paper
-Write a function that prints an integer.
-```
-* Prototype: void print_number(int n);
-* You can only use _putchar function to print
-* You are not allowed to use long
-* You are not allowed to use arrays or pointers
-* You are not allowed to hard-code special values
+* Prototype: char **strtow(char *str);
+* The function returns a pointer to an array of strings (words)
+* Each element of this array should contain a single word, null-terminated
+* The last element of the returned array should be NULL
+* Words are separated by spaces
+* Returns NULL if str == NULL or str == ""
+* If your function fails, it should return NULL
 
 ## Author
 ### Kevin Yook 
