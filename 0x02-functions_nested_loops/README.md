@@ -14,7 +14,7 @@
 * What are header files and how to to use them with #include
 
 ## Exercises
-[0._putchar](./0-holberton.c)
+[0-holberton.c](./0-holberton.c)
 ```
 Write a program that prints Holberton, followed by a new line.
 ``
