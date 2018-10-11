@@ -4,145 +4,135 @@
 
     At the end of this project you are expected to be able to explain to anyone, without the help of Google:
 
-* What are nested loops and how to use them
-* What is a function and how do you use functions
-* What is the difference between a declaration and a definition of a function
-* What is a prototype
-* Scope of variables
-* What are the gcc flags -Wall -Werror -pedantic -Wextra
-* What are header files and how to to use them with #include
+* What are make, Makefiles
+* When, why and how to use Makefiles
+* What are a rules and how to set and use them
+* What are explicit and implicit rules
+* What are the most common / useful rules
+* What are variables and how to set and use them
 
 ## Exercises
 
-[0-isupper.c](./0-isupper.c)
+[0-Makefile](./0-Makefile)
 ```
-Write a function that checks for uppercase character.
+Create your first Makefile.
 ```
-* Prototype: int _isupper(int c);
-* Returns 1 if c is uppercase
-* Returns 0 otherwise
+* name of the executable: holberton
+* rules: all 
+  * The all rule builds your executable
+* variables: none
 
-[1-isdigit.c](./1-isdigit.c)
+[1-Makefile](./1-Makefile)
 ```
-Write a function that checks for a digit (0 through 9).
+Requirements:
 ```
-* Prototype: int _isdigit(int c);
-* Returns 1 if c is a digit
-* Returns 0 otherwise
+* name of the executable: holberton
+* rules: all 
+  * The all rule builds your executable
+* variables: CC, SRC 
+  * CC: the compiler to be used
+  * SRC: the .c files
 
-[2-mul.c](./2-mul.c )
+[2-Makefile](./2-Makefile)
 ```
-Collaboration is multiplication
-Write a function that multiplies two integers.
+Create your first useful Makefile.
 ```
-* Prototype: int mul(int a, int b);
+* name of the executable: holberton
+* rules: all
+  * The all rule builds your executable
+* variables: CC, SRC, OBJ, NAME 
+  * CC: the compiler to be used
+  * SRC: the .c files
+  * OBJ: the .o files
+  * NAME: the name of the executable
+* The all rule should recompile only the updated source files
+* You are not allowed to have a list of all the .o files
 
-[3-print_numbers.c](./3-print_numbers.c)
+[3-Makefile](./3-Makefile)
 ```
-The numbers speak for themselves
-Write a function that prints the numbers, from 0 to 9, followed by a new line.
+Requirements:
 ```
-* Prototype: void print_numbers(void);
-* You can only use _putchar twice in your code
+* name of the executable: holberton
+* rules: all, clean, oclean, fclean, re
+  * all: builds your executable
+  * clean: deletes all Emacs and Vim temporary files along with the executable
+  * oclean: deletes the object files
+  * fclean: deletes the Emacs temporary files, the executable, and the object files
+  * re: forces recompilation of all source files
+* variables: CC, SRC, OBJ, NAME, RM 
+  * CC: the compiler to be used
+  * SRC: the .c files
+  * OBJ: the .o files
+  * NAME: the name of the executable
+  * RM: the program to delete files
+* The all rule should recompile only the updated source files
+* The clean, oclean, fclean, re rules should never fail
+* You are not allowed to have a list of all the .o files
 
-[4-print_most_numbers.c](./4-print_most_numbers.c)
+[4-Makefile](./4-Makefile)
 ```
-I believe in numbers and signs
-Write a function that prints the numbers, from 0 to 9, followed by a new line.
+Requirements:
 ```
-* Prototype: void print_most_numbers(void);
-* Do not print 2 and 4
-* You can only use _putchar twice in your code
+* name of the executable: holberton
+* rules: all, clean, fclean, oclean, re 
+  * all: builds your executable
+  * clean: deletes all Emacs and Vim temporary files along with the executable
+  * oclean: deletes the object files
+  * fclean: deletes the Emacs temporary files, the executable, and the object files
+  * re: forces recompilation of all source files
+* variables: CC, SRC, OBJ, NAME, RM, CFLAGS
+  * CC: the compiler to be used
+  * SRC: the .c files
+  * OBJ: the .o files
+  * NAME: the name of the executable
+  * RM: the program to delete files
+  * CFLAGS: your favorite compiler flags: -Wall -Werror -Wextra -pedantic
+* The all rule should recompile only the updated source files
+* The clean, oclean, fclean, re rules should never fail
+* You are not allowed to have a list of all the .o files
 
-[5-more_numbers.c](./5-more_numbers.c)
+[5-island_perimeter.py](./5-island_perimeter.py)
 ```
-Numbers constitute the only universal language
-Write a function that prints 10 times the numbers, from 0 to 14,
-followed by a new line.
+Create a function def island_perimeter(grid): that returns the perimeter of the island described in grid:
 ```
-*  Prototype: void more_numbers(void);
-* You can only use _putchar three times in your code
+* grid is a list of list of integers: 
+  * 0 represents a water zone
+  * 1 represents a land zone
+  * One cell is a square with side length 1
+  * Grid cells are connected horizontally/vertically (not diagonally). 
+  * Grid is rectangular, width and height don’t exceed 100
+* Grid is completely surrounded by water, and there is one island (or nothing).
+* The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island).
 
-[6-print_line.c](./6-print_line.c)
+[100-Makefile](./100-Makefile)
 ```
-The shortest distance between two points is a straight line
-Write a function that draws a straight line in the terminal.
+Requirements:
 ```
-* Prototype: void print_line(int n);
-* You can only use _putchar function to print
-* Where n is the number of times the character _ should be printed
-* The line should end with a \n
-* If n is 0 or less, the function should only print \n
-
-[7-print_diagonal.c](./7-print_diagonal.c)
-```
-I feel like I am diagonally parked in a parallel universe
-Write a function that draws a diagonal line on the terminal.
-```
-* Prototype: void print_diagonal(int n);
-* You can only use _putchar function to print
-* Where n is the number of times the character \ should be printed
-* The diagonal should end with a \n
-* If n is 0 or less, the function should only print a \n
-
-[8-print_square.c](./8-print_square.c)
-```
-You are so much sunshine in every square inch
-Write a function that prints a square, followed by a new line.
-```
-* Prototype: void print_square(int size);
-* You can only use _putchar function to print
-* Where size is the size of the square
-* If size is 0 or less, the function should print only a new line
-* Use the character # to print the square
-
-[9-fizz_buzz.c](./9-fizz_buzz.c)
-```
-The “Fizz-Buzz test” is an interview question designed to help filter out the
-99.5% of programming job candidates who can’t seem to program their way out of
-a wet paper bag.
-Write a program that prints the numbers from 1 to 100, followed by a new line.
-```
-* But for multiples of three print Fizz instead of the number and for the
-  multiples of five print Buzz. For numbers which are multiples of both three and
-  five print FizzBuzz.
-
-* Each number or word should be separated by a space
-* You are allowed to use the standard library
-
-[10-print_triangle.c](./10-print_triangle.c)
-```
-Write a function that prints a triangle, followed by a new line.
-```
-* Prototype: void print_triangle(int size);
-* You can only use _putchar function to print
-* Where size is the size of the triangle
-* If size is 0 or less, the function should print only a new line
-* Use the character # to print the triangle
-
-[100-prime_factor.c](./100-prime_factor.c)
-```
-The problem of distinguishing prime numbers from composite numbers and of
-resolving the latter into their prime factors is known to be one of the most
-important and useful in arithmetic
-The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
-Write a program that finds and prints the largest prime factor of the number
-612852475143, followed by a new line.
-```
-* You are allowed to use the standard library
-* Your program will be compiled with this command: gcc -Wall -pedantic -Werror -
-* Wextra 100-prime_factor.c -o 100-prime_factor -lm
-
-[101-print_number.c](./101-print_number.c)
-```
-Numbers have life; they're not just symbols on paper
-Write a function that prints an integer.
-```
-* Prototype: void print_number(int n);
-* You can only use _putchar function to print
-* You are not allowed to use long
-* You are not allowed to use arrays or pointers
-* You are not allowed to hard-code special values
+* name of the executable: holberton
+* rules: all, clean, fclean, oclean, re 
+  * all: builds your executable
+  * clean: deletes all Emacs and Vim temporary files along with the executable
+  * oclean: deletes the object files
+  * fclean: deletes the Emacs temporary files, the executable, and the object files
+  * re: forces recompilation of all source files
+* variables: CC, SRC, OBJ, NAME, RM, CFLAGS 
+  * CC: the compiler to be used
+  * SRC: the .c files
+  * OBJ: the .o files
+  * NAME: the name of the executable
+  * RM: the program to delete files
+  * CFLAGS: your favorite compiler flags: -Wall -Werror -Wextra -pedantic
+* The all rule should recompile only the updated source files
+* The clean, oclean, fclean, re rules should never fail
+* You are not allowed to have a list of all the .o files
+* You have to use $(RM) for the cleaning up rules, but you are not allowed to set the RM variable
+* You are not allowed to use the string $(CC) more than once in your Makefile
+* You are only allowed to use the string $(RM) twice in your Makefile
+* You are not allowed to use the string $(CFLAGS) (but the compiler should still use the flags you set in this variable)
+* You are not allowed to have an $(OBJ) rule
+* You are not allowed to use the %.o: %.c rule
+* Your Makefile should work even if there is a file in the folder that has the same name as one of your rule
+* Your Makefile should not compile if the header file m.h is missing
 
 ## Author
 ### Kevin Yook 
