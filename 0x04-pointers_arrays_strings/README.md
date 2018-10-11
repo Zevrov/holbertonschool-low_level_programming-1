@@ -1,148 +1,112 @@
-# 0x03-more_functions_nested_loops
+# 0x04. C - Pointers, arrays and strings
 
 **What you should learn from this project**
 
     At the end of this project you are expected to be able to explain to anyone, without the help of Google:
 
-* What are nested loops and how to use them
-* What is a function and how do you use functions
-* What is the difference between a declaration and a definition of a function
-* What is a prototype
+* What are pointers and how to use them
+* What are arrays and how to use them
+* What are the differences between pointers and arrays
+* How to use strings and how to manipulate them
 * Scope of variables
-* What are the gcc flags -Wall -Werror -pedantic -Wextra
-* What are header files and how to to use them with #include
 
 ## Exercises
 
-[0. isupper](./0-isupper.c)
+[0-reset_to_98.c](./0-reset_to_98.c)
 ```
-Write a function that checks for uppercase character.
+Write a function that swaps the values of two integers.
 ```
-* Prototype: int _isupper(int c);
-* Returns 1 if c is uppercase
-* Returns 0 otherwise
+* Prototype: void reset_to_98(int *n); 
 
-[1. isdigit](./1-isdigit.c)
+[1-swap.c](./1-swap.c)
 ```
 Write a function that checks for a digit (0 through 9).
 ```
-* Prototype: int _isdigit(int c);
-* Returns 1 if c is a digit
-* Returns 0 otherwise
+* void swap_int(int *a, int *b);
 
-[2-mul.c](./2-mul.c )
+[2-strlen.c](./2-strlen.c)
 ```
-Collaboration is multiplication
-Write a function that multiplies two integers.
+Write a function that returns the length of a string.
+FYI: The standard library provides a similar function: strlen. Run man strlen to learn more.
 ```
-* Prototype: int mul(int a, int b);
+* Prototype: int _strlen(char *s);
 
-[3-print_numbers.c](./3-print_numbers.c)
+[3-puts.c](./3-puts.c)
 ```
-The numbers speak for themselves
-Write a function that prints the numbers, from 0 to 9, followed by a new line.
+Write a function that prints a string, followed by a new line, to stdout.
+FYI: The standard library provides a similar function: puts. Run man puts to learn more.
 ```
-* Prototype: void print_numbers(void);
-* You can only use _putchar twice in your code
+* Prototype: void _puts(char *str);
 
-[4-print_most_numbers.c](./4-print_most_numbers.c)
+[4-print_rev.c](./4-print_rev.c)
 ```
-I believe in numbers and signs
-Write a function that prints the numbers, from 0 to 9, followed by a new line.
+Write a function that prints a string, in reverse, followed by a new line.
 ```
-* Prototype: void print_most_numbers(void);
-* Do not print 2 and 4
-* You can only use _putchar twice in your code
+* Prototype: void print_rev(char *s);
 
-[5-more_numbers.c](./5-more_numbers.c)
+[5-rev_string.c](./5-rev_string.c)
 ```
-Numbers constitute the only universal language
-Write a function that prints 10 times the numbers, from 0 to 14,
-followed by a new line.
+Write a function that reverses a string. 
 ```
-*  Prototype: void more_numbers(void);
-* You can only use _putchar three times in your code
+*  Prototype: void rev_string(char *s);
 
-[6-print_line.c](./6-print_line.c)
+[6-puts2.c](./6-puts2.c)
 ```
-The shortest distance between two points is a straight line
-Write a function that draws a straight line in the terminal.
+Write a function that prints one char out of 2 of a string, followed by a new line.
 ```
-* Prototype: void print_line(int n);
-* You can only use _putchar function to print
-* Where n is the number of times the character _ should be printed
-* The line should end with a \n
-* If n is 0 or less, the function should only print \n
+* Prototype: void puts2(char *str);
+* The function should print only one character out of two, starting with the first one
 
-[7-print_diagonal.c](./7-print_diagonal.c)
+[7-puts_half.c](./7-puts_half.c)
 ```
-I feel like I am diagonally parked in a parallel universe
-Write a function that draws a diagonal line on the terminal.
+Write a function that prints half of a string, followed by a new line.
 ```
-* Prototype: void print_diagonal(int n);
-* You can only use _putchar function to print
-* Where n is the number of times the character \ should be printed
-* The diagonal should end with a \n
-* If n is 0 or less, the function should only print a \n
+* Prototype: void puts_half(char *str);
+* The function should print the second half of the string
+* If the number of characters is odd, the function should print the last n characters of the string, where n = (length_of_the_string - 1) / 2
 
-[8-print_square.c](./8-print_square.c)
+[8-print_array.c](./8-print_array.c)
 ```
-You are so much sunshine in every square inch
-Write a function that prints a square, followed by a new line.
+Write a function that prints n elements of an array of integers, followed by a new line.
 ```
-* Prototype: void print_square(int size);
-* You can only use _putchar function to print
-* Where size is the size of the square
-* If size is 0 or less, the function should print only a new line
-* Use the character # to print the square
+* Prototype: void print_array(int *a, int n);
+* where n is the number of elements of the array to be printed
+* Numbers must be separated by comma, followed by a space
+* The numbers should be displayed in the same order as they are stored in the array
+* You are allowed to use printf
 
-[9-fizz_buzz.c](./9-fizz_buzz.c)
+[9-strcpy.c](./9-strcpy.c)
 ```
-The “Fizz-Buzz test” is an interview question designed to help filter out the
-99.5% of programming job candidates who can’t seem to program their way out of
-a wet paper bag.
-Write a program that prints the numbers from 1 to 100, followed by a new line.
+Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
+FYI: The standard library provides a similar function: strcpy. Run man strcpy to learn more.
 ```
-* But for multiples of three print Fizz instead of the number and for the
-  multiples of five print Buzz. For numbers which are multiples of both three and
-  five print FizzBuzz.
+* Prototype: char *_strcpy(char *dest, char *src); 
+* Return value: the pointer to dest
 
-* Each number or word should be separated by a space
-* You are allowed to use the standard library
-
-[10-print_triangle.c](./10-print_triangle.c)
+[100-atoi.c](./100-atoi.c)
 ```
-Write a function that prints a triangle, followed by a new line.
+Write a function that convert a string to an integer.
+FYI: The standard library provides a similar function: atoi. Run man atoi to learn more.
 ```
-* Prototype: void print_triangle(int size);
-* You can only use _putchar function to print
-* Where size is the size of the triangle
-* If size is 0 or less, the function should print only a new line
-* Use the character # to print the triangle
-
-[100-prime_factor.c](./100-prime_factor.c)
-```
-The problem of distinguishing prime numbers from composite numbers and of
-resolving the latter into their prime factors is known to be one of the most
-important and useful in arithmetic
-The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
-Write a program that finds and prints the largest prime factor of the number
-612852475143, followed by a new line.
-```
-* You are allowed to use the standard library
-* Your program will be compiled with this command: gcc -Wall -pedantic -Werror -
-* Wextra 100-prime_factor.c -o 100-prime_factor -lm
-
-[101-print_number.c](./101-print_number.c)
-```
-Numbers have life; they're not just symbols on paper
-Write a function that prints an integer.
-```
-* Prototype: void print_number(int n);
-* You can only use _putchar function to print
+* Prototype: int _atoi(char *s);
+* The number in the string can be preceded by an infinite number of characters
+* You need to take into account all the - and + signs before the number
+* If there are no numbers in the string, the function must return 0
 * You are not allowed to use long
-* You are not allowed to use arrays or pointers
+* You are not allowed to declare new variables of “type” array
 * You are not allowed to hard-code special values
+* Your code needs to work on both ubuntu 14.04 LTS and 16.04 LTS
+* We will use the -fsanitize=signed-integer-overflow gcc flag to compile your code. If this flag is not available in you version of gcc, you can install the last version on your VM
+* We will use gcc version 5 or above to compile
+
+[101-keygen.c](./101-keygen.c)
+```
+Create a program that generates random valid passwords for the program 101-crackme.
+```
+* You are allowed to use the standard library
+* You don’t have to pass the betty-style tests (you still need to pass the betty-doc tests)
+* man srand, rand, time
+* gdb and objdump can help
 
 ## Author
 ### Kevin Yook 
