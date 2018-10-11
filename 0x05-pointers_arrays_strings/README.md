@@ -32,89 +32,104 @@ FYI: The standard library provides a similar function: strncat. Run man strncat 
   * src does not need to be null-terminated if it contains n or more bytes
 * Return a pointer to the resulting string dest
 
-[2-strlen.c](./2-strlen.c)
+[2-strncpy.c](./2-strncpy.c)
 ```
-Write a function that returns the length of a string.
-FYI: The standard library provides a similar function: strlen. Run man strlen to learn more.
+Write a function that copies a string.
+FYI: The standard library provides a similar function: strncpy. Run man strncpy to learn more.
 ```
-* Prototype: int _strlen(char *s);
+* Prototype: char *_strncpy(char *dest, char *src, int n);
+* Your function should work exactly like strncpy
 
-[3-puts.c](./3-puts.c)
+[3-strcmp.c](./3-strcmp.c)
 ```
-Write a function that prints a string, followed by a new line, to stdout.
-FYI: The standard library provides a similar function: puts. Run man puts to learn more.
+Write a function that compares two strings.
+FYI: The standard library provides a similar function: strcmp. Run man strcmp to learn more.
 ```
-* Prototype: void _puts(char *str);
+* Prototype: int _strcmp(char *s1, char *s2);
+* Your function should work exactly like strcmp
 
-[4-print_rev.c](./4-print_rev.c)
+[4-rev_array.c](./4-rev_array.c)
 ```
-Write a function that prints a string, in reverse, followed by a new line.
+Write a function that reverses the content of an array of integers.
 ```
-* Prototype: void print_rev(char *s);
+* Prototype: void reverse_array(int *a, int n);
+* Where n is the number of elements of the array
 
-[5-rev_string.c](./5-rev_string.c)
+[5-string_toupper.c](./5-string_toupper.c)
 ```
-Write a function that reverses a string. 
+Write a function that changes all lowercase letters of a string to uppercase.
 ```
-*  Prototype: void rev_string(char *s);
+*  Prototype: char *string_toupper(char *);
 
-[6-puts2.c](./6-puts2.c)
+[6-cap_string.c](./6-cap_string.c)
 ```
-Write a function that prints one char out of 2 of a string, followed by a new line.
+Write a function that capitalizes all words of a string.
 ```
-* Prototype: void puts2(char *str);
-* The function should print only one character out of two, starting with the first one
+* Prototype: char *cap_string(char *);
+* Separators of words: space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }
 
-[7-puts_half.c](./7-puts_half.c)
+[7-leet.c](./7-leet.c)
 ```
-Write a function that prints half of a string, followed by a new line.
+Write a function that encodes a string into 1337.
 ```
-* Prototype: void puts_half(char *str);
-* The function should print the second half of the string
-* If the number of characters is odd, the function should print the last n characters of the string, where n = (length_of_the_string - 1) / 2
+* Letters a and A should be replaced by 4
+* Letters e and E should be replaced by 3
+* Letters o and O should be replaced by 0
+* Letters t and T should be replaced by 7
+* Letters l and L should be replaced by 1
+* Prototype: char *leet(char *);
+* You can only use one if in your code
+* You can only use two loops in your code
+* You are not allowed to use switch
+* You are not allowed to use any ternary operation
 
-[8-print_array.c](./8-print_array.c)
+[8-rot13.c](./8-rot13.c)
 ```
-Write a function that prints n elements of an array of integers, followed by a new line.
+Write a function that encodes a string using rot13.
 ```
-* Prototype: void print_array(int *a, int n);
-* where n is the number of elements of the array to be printed
-* Numbers must be separated by comma, followed by a space
-* The numbers should be displayed in the same order as they are stored in the array
-* You are allowed to use printf
+* Prototype: char *rot13(char *);
+* You can only use if statement once in your code
+* You can only use two loops in your code
+* You are not allowed to use switch
+* You are not allowed to use any ternary operation
 
-[9-strcpy.c](./9-strcpy.c)
+[100-print_number.c](./100-print_number.c)
 ```
-Write a function that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
-FYI: The standard library provides a similar function: strcpy. Run man strcpy to learn more.
+Write a function that prints an integer.
 ```
-* Prototype: char *_strcpy(char *dest, char *src); 
-* Return value: the pointer to dest
-
-[100-atoi.c](./100-atoi.c)
-```
-Write a function that convert a string to an integer.
-FYI: The standard library provides a similar function: atoi. Run man atoi to learn more.
-```
-* Prototype: int _atoi(char *s);
-* The number in the string can be preceded by an infinite number of characters
-* You need to take into account all the - and + signs before the number
-* If there are no numbers in the string, the function must return 0
+* Prototype: void print_number(int n);
+* You can only use _putchar function to print
 * You are not allowed to use long
-* You are not allowed to declare new variables of “type” array
+* You are not allowed to use arrays or pointers
 * You are not allowed to hard-code special values
-* Your code needs to work on both ubuntu 14.04 LTS and 16.04 LTS
-* We will use the -fsanitize=signed-integer-overflow gcc flag to compile your code. If this flag is not available in you version of gcc, you can install the last version on your VM
-* We will use gcc version 5 or above to compile
 
-[101-keygen.c](./101-keygen.c)
+[101-magic.c](./101-magic.c)
 ```
-Create a program that generates random valid passwords for the program 101-crackme.
+Add one line to this code, so that the program prints a[2] = 98, followed by a new line.
 ```
+* You are not allowed to use the variable a in your new line of code
+* You are not allowed to modify the variable p
+* You can only write one statement
+* You are not allowed to use ,
+* You are not allowed to code anything else than the line of expected line of code at the expected line
+* Your code should be written at line 19, before the ;
+* Do not remove anything from the initial code (not even the comments)
+* and don’t change anything but the line of code you are adding (don’t change the spaces to tabs!)
 * You are allowed to use the standard library
-* You don’t have to pass the betty-style tests (you still need to pass the betty-doc tests)
-* man srand, rand, time
-* gdb and objdump can help
+
+[102-infinite_add.c](./102-infinite_add.c)
+```
+Write a function that adds two numbers.
+```
+* Prototype: char *infinite_add(char *n1, char *n2, char *r, int size_r);
+* Where n1 and n2 are the two numbers
+* r is the buffer that the function will use to store the result
+* size_r is the buffer size
+* The function returns a pointer to the result
+* You can assume that you will always get positive numbers, or 0
+* You can assume that there will be only digits in the strings n1 and n2
+* n1 and n2 will never be empty
+* If the result can not be stored in r the function must return 0
 
 ## Author
 ### Kevin Yook 
