@@ -21,7 +21,7 @@ This repository contains example projects using lower level programming language
   - bash scripting
 
 ## Projects
-Project that are int ** are not included in this repository and is in a seperated repository
+Project that are in ** are not included in this repository and is in a seperated repository
 1. [0x00-hello_world](./0x00-hello_world)
 2. [0x01-variables_if_else_while](./0x01-variables_if_else_while)
 3. [0x02-functions_nested_loops](./0x02-functions_nested_loops)
